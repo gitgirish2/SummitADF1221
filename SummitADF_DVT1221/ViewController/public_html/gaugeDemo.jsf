@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <af:document title="gaugeDemo.jsf" id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <dvt:dialGauge id="dialGauge1" indicator="needleAlta" minimum="0" maximum="2600" background="domeAlta"
+                     value="#{bindings.AmountInStock.inputValue}">
+        <dvt:gaugeMetricLabel rendered="true" id="gml1"/>
+      </dvt:dialGauge>
+    </af:form>
+  </af:document>
+</f:view>

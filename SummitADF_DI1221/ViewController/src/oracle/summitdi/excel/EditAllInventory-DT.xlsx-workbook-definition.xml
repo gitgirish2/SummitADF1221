@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workbook id="b922746a-195a-49f4-93ee-9efb7f445e0a" schema-version="1" xmlns="http://xmlns.oracle.com/adf/desktopintegration/workbook">
+  <!--source-document="EditAllInventory.xlsx" client-version="4.2.0.65534"-->
+  <resource-list>
+    <resource>
+      <alias>res</alias>
+      <class>oracle.summitdi.resources.UIResources</class>
+    </resource>
+  </resource-list>
+  <branding-list>
+    <branding>
+      <name>Application Name</name>
+      <value>#{res['summitdi.general.branding.application']}</value>
+    </branding>
+    <branding>
+      <name>Version</name>
+      <value>#{res['summitdi.general.branding.version']}</value>
+    </branding>
+    <branding>
+      <name>Workbook Name</name>
+      <value>#{res['excel.inventory.title']}</value>
+    </branding>
+    <branding>
+      <name>Workbook Version</name>
+      <value>#{res['summitdi.general.branding.version']}</value>
+    </branding>
+    <branding>
+      <name>Copyright</name>
+      <value>#{res['summitdi.general.branding.copyright']}</value>
+    </branding>
+  </branding-list>
+  <remote-servlet-path>/adfdiRemoteServlet</remote-servlet-path>
+  <web-app-root>http://localhost:7101/summit</web-app-root>
+  <application-home-folder></application-home-folder>
+  <web-pages-folder></web-pages-folder>
+  <runtime-ribbon-tab>
+    <title>Inventory</title>
+    <command-list>
+      <command method="ClearAllData" />
+      <command method="EditOptions" />
+      <command method="ViewAboutDialog" />
+      <command method="Login" />
+      <command method="Logout" />
+      <command method="ToggleStatusViewer" />
+    </command-list>
+  </runtime-ribbon-tab>
+  <worksheet-list>
+    <worksheet name="Inventory">
+      <event-list>
+        <event invoke-once-only="true" type="Startup">
+          <action-set>
+            <status mode="MainBarOnly">
+              <title>#{res['excel.inventory.ribbon.download.title']}</title>
+              <message>#{res['excel.inventory.ribbon.download.message']}</message>
+            </status>
+            <action-list>
+              <component-action>
+                <component-id>TAB1912831034</component-id>
+                <action>Initialize</action>
+                <annotation>Initialize needed in Startup before download+resize</annotation>
+              </component-action>
+              <server-action>
+                <action-id>Execute</action-id>
+                <annotation>Execute view object query</annotation>
+              </server-action>
+              <component-action>
+                <component-id>TAB1912831034</component-id>
+                <action>Download</action>
+                <annotation></annotation>
+              </component-action>
+              <component-action>
+                <component-id>TAB1912831034</component-id>
+                <action>ResizeColumns</action>
+                <annotation></annotation>
+              </component-action>
+            </action-list>
+          </action-set>
+          <annotation>Ensure that Inventory table is populated when the workbook is opened the first time</annotation>
+        </event>
+      </event-list>
+      <ribbon-command-list>
+        <ribbon-command id="MEN665102024">
+          <select-action-set>
+            <status mode="MainBarOnly" allow-cancel="true">
+              <title>#{res['excel.inventory.ribbon.download.title']}</title>
+              <message>#{res['excel.inventory.ribbon.download.message']}</message>
+            </status>
+            <action-list>
+              <server-action>
+                <action-id>Execute</action-id>
+                <annotation>Execute view object query</annotation>
+              </server-action>
+              <component-action>
+                <component-id>TAB1912831034</component-id>
+                <action>Download</action>
+                <annotation></annotation>
+              </component-action>
+              <component-action>
+                <component-id>TAB1912831034</component-id>
+                <action>ResizeColumns</action>
+                <annotation></annotation>
+              </component-action>
+            </action-list>
+          </select-action-set>
+          <label>#{res['excel.inventory.ribbon.download']}</label>
+          <tooltip>#{res['excel.inventory.ribbon.download.tooltip']}</tooltip>
+          <image>Download</image>
+          <annotation>Download all inventory information</annotation>
+        </ribbon-command>
+        <ribbon-command id="MEN1122364513">
+          <select-action-set>
+            <status allow-cancel="true">
+              <title>#{res['excel.inventory.ribbon.upload.title']}</title>
+              <message>#{res['excel.inventory.ribbon.upload.message']}</message>
+            </status>
+            <action-list>
+              <component-action>
+                <component-id>TAB1912831034</component-id>
+                <action>Upload</action>
+                <annotation></annotation>
+              </component-action>
+            </action-list>
+          </select-action-set>
+          <label>#{res['excel.inventory.ribbon.upload']}</label>
+          <tooltip>#{res['excel.inventory.ribbon.upload.tooltip']}</tooltip>
+          <image>Upload</image>
+          <annotation>Upload all changes</annotation>
+        </ribbon-command>
+        <ribbon-command id="MEN2032124056">
+          <select-action-set>
+            <status mode="MainBarOnly">
+              <title>#{res['excel.inventory.ribbon.delete.title']}</title>
+              <message>#{res['excel.inventory.ribbon.delete.message']}</message>
+            </status>
+            <action-list>
+              <confirmation-action>
+                <prompt>#{res['excel.inventory.ribbon.delete.confirmation.prompt']}</prompt>
+                <title>#{res['excel.inventory.ribbon.delete.confirmation.title']}</title>
+                <annotation>Confirmation to delete</annotation>
+              </confirmation-action>
+              <component-action>
+                <component-id>TAB1912831034</component-id>
+                <action>DeleteFlaggedRows</action>
+                <annotation>Delete Flagged</annotation>
+              </component-action>
+            </action-list>
+          </select-action-set>
+          <label>#{res['excel.inventory.ribbon.delete']}</label>
+          <tooltip>#{res['excel.inventory.ribbon.delete.tooltip']}</tooltip>
+          <image>DeleteRows</image>
+          <annotation>Delete flagged rows</annotation>
+        </ribbon-command>
+      </ribbon-command-list>
+      <title>#{res['excel.inventory.sheet.title']}</title>
+      <pagedef-usage-id>ExcelEditAllInventory</pagedef-usage-id>
+      <protection>
+        <mode>Automatic</mode>
+      </protection>
+      <component-list>
+        <image-component id="IMG1377198945" origin="B1">
+          <source>/images/oracle_logo_sm.png</source>
+          <short-desc>Oracle Logo</short-desc>
+        </image-component>
+        <label-component id="LBL344251214" origin="D1">
+          <label>#{res['excel.inventory.title']}</label>
+          <style>Branding Area</style>
+        </label-component>
+        <table-component id="TAB1912831034" origin="B4">
+          <tree-id>InventoryWarehouseView</tree-id>
+          <column-list>
+            <column id="_ADF_ChangedColumn">
+              <update-component>
+                <output-text />
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>10</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{_ADFDIres['COMPONENTS_TABLE_CHANGED_COL_LABEL']}</header-label>
+              <cell-style>Indicator Cell</cell-style>
+            </column>
+            <column id="_ADF_FlagColumn">
+              <update-component>
+                <output-text />
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>10</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{_ADFDIres['COMPONENTS_TABLE_FLAGGED_COL_LABEL']}</header-label>
+              <cell-style>Indicator Cell</cell-style>
+            </column>
+            <column id="_ADF_StatusColumn">
+              <update-component>
+                <output-text>
+                  <double-click-action-set>
+                    <status enabled="false" />
+                    <action-list>
+                      <component-action>
+                        <component-id>TAB1912831034</component-id>
+                        <action>DisplayRowErrors</action>
+                      </component-action>
+                    </action-list>
+                  </double-click-action-set>
+                </output-text>
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>20</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{_ADFDIres['COMPONENTS_TABLE_STATUS_COL_LABEL']}</header-label>
+              <cell-style>Status Cell</cell-style>
+            </column>
+            <column id="ProductId">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.ProductId.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.ProductId.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <group-header>
+                <boundary>Start</boundary>
+                <label>#{res['excel.inventory.groupheader.inventorydetails']}</label>
+                <style-name>Column Header</style-name>
+              </group-header>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.ProductId.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.ProductId.tooltip}</tooltip>
+            </column>
+            <column id="AmountInStock">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.AmountInStock.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.AmountInStock.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.AmountInStock.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.AmountInStock.tooltip}</tooltip>
+            </column>
+            <column id="OutOfStockExplanation">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.OutOfStockExplanation.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.OutOfStockExplanation.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.OutOfStockExplanation.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.OutOfStockExplanation.tooltip}</tooltip>
+            </column>
+            <column id="MaxInStock">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.MaxInStock.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.MaxInStock.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.MaxInStock.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.MaxInStock.tooltip}</tooltip>
+            </column>
+            <column id="ReorderPoint">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.ReorderPoint.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.ReorderPoint.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.ReorderPoint.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.ReorderPoint.tooltip}</tooltip>
+            </column>
+            <column id="RestockDate">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.RestockDate.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.RestockDate.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <group-header>
+                <boundary>End</boundary>
+              </group-header>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.RestockDate.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.RestockDate.tooltip}</tooltip>
+            </column>
+            <column id="WarehouseId">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.WarehouseId.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.WarehouseId.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <group-header>
+                <boundary>Start</boundary>
+                <label>#{res['excel.inventory.groupheader.warehousedetails']}</label>
+                <style-name>Column Header</style-name>
+              </group-header>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.WarehouseId.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.WarehouseId.tooltip}</tooltip>
+            </column>
+            <column id="FirstName">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.FirstName.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.FirstName.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.FirstName.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.FirstName.tooltip}</tooltip>
+            </column>
+            <column id="LastName">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.LastName.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.LastName.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.LastName.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.LastName.tooltip}</tooltip>
+            </column>
+            <column id="Address">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.Address.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.Address.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.Address.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.Address.tooltip}</tooltip>
+            </column>
+            <column id="City">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.City.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.City.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.City.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.City.tooltip}</tooltip>
+            </column>
+            <column id="State">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.State.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.State.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.State.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.State.tooltip}</tooltip>
+            </column>
+            <column id="ZipCode">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.ZipCode.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.ZipCode.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.ZipCode.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.ZipCode.tooltip}</tooltip>
+            </column>
+            <column id="Country">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.Country.inputValue}</value>
+                  <read-only>#{bindings.InventoryWarehouseView.hints.Country.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <group-header>
+                <boundary>End</boundary>
+              </group-header>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryWarehouseView.hints.Country.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryWarehouseView.hints.Country.tooltip}</tooltip>
+            </column>
+            <column id="_ADF_RowKeyColumn">
+              <update-component>
+                <output-text />
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>4</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{_ADFDIres['COMPONENTS_TABLE_ROWKEY_COL_LABEL']}</header-label>
+              <cell-style>Key Cell</cell-style>
+            </column>
+          </column-list>
+          <resize-columns-mode>AutoFitAllWithHeader</resize-columns-mode>
+          <display-upload-options>false</display-upload-options>
+          <row-actions>
+            <delete-row-action-id>Delete</delete-row-action-id>
+            <delete-row-enabled>true</delete-row-enabled>
+          </row-actions>
+          <batch-options>
+            <commit-action>Commit</commit-action>
+          </batch-options>
+          <row-limit>
+            <max-rows>500</max-rows>
+          </row-limit>
+        </table-component>
+      </component-list>
+    </worksheet>
+  </worksheet-list>
+  <compatibility>
+    <table-components>
+      <model-driven-columns>
+        <date-picker-enabled>true</date-picker-enabled>
+        <input-lov-picker-enabled>true</input-lov-picker-enabled>
+      </model-driven-columns>
+      <row-action-set-model-mgmt-enabled>true</row-action-set-model-mgmt-enabled>
+      <smart-row-failure-reporting-enabled>true</smart-row-failure-reporting-enabled>
+    </table-components>
+    <data-entry-validation-enabled>true</data-entry-validation-enabled>
+  </compatibility>
+  <auto-display-status-viewer-enabled>true</auto-display-status-viewer-enabled>
+</workbook>

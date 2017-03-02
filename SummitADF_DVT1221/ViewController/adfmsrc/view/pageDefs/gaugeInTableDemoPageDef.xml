@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.65.21" id="gaugeInTableDemoPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ProductInventoryView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="ProductInventoryView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ProductInventoryView1Iterator" id="ProductInventoryView1">
+      <nodeDefinition DefName="model.ProductInventoryView" Name="ProductInventoryView10">
+        <AttrNames>
+          <Item Value="ProductId"/>
+          <Item Value="Name"/>
+          <Item Value="ShortDesc"/>
+          <Item Value="AmountInStock"/>
+          <Item Value="ReorderPoint"/>
+          <Item Value="MaxInStock"/>
+          <Item Value="WarehouseId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

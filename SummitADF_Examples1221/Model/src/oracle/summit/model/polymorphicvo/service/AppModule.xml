@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.1.3.2.36"
+  InheritPersonalization="merge"
+  ComponentClass="oracle.summit.base.SummitApplicationModuleImpl"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_deployType" Value="4096"/>
+  </DesignTime>
+  <ViewUsage
+    Name="SDeptView1"
+    ViewObjectName="oracle.summit.model.polymorphicvo.views.SDeptView"/>
+  <ViewUsage
+    Name="SEmpView1"
+    ViewObjectName="oracle.summit.model.polymorphicvo.views.SEmpView"/>
+  <ViewUsage
+    Name="SEmpView2"
+    ViewObjectName="oracle.summit.model.polymorphicvo.views.SEmpView"/>
+  <ViewUsage
+    Name="SEmpView3"
+    ViewObjectName="oracle.summit.model.polymorphicvo.views.SEmpView"/>
+  <ViewUsage
+    Name="STitleView1"
+    ViewObjectName="oracle.summit.model.polymorphicvo.views.STitleView"/>
+  <ViewLinkUsage
+    Name="SEmpManagerIdFkLink1"
+    ViewLinkObjectName="oracle.summit.model.polymorphicvo.views.SEmpManagerIdFkLink"
+    SrcViewUsageName="oracle.summit.model.polymorphicvo.service.AppModule.SEmpView1"
+    DstViewUsageName="oracle.summit.model.polymorphicvo.service.AppModule.SEmpView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="SEmpDeptIdFkLink1"
+    ViewLinkObjectName="oracle.summit.model.polymorphicvo.views.SEmpDeptIdFkLink"
+    SrcViewUsageName="oracle.summit.model.polymorphicvo.service.AppModule.SDeptView1"
+    DstViewUsageName="oracle.summit.model.polymorphicvo.service.AppModule.SEmpView3"
+    Reversed="false"/>
+  <AttrArray Name="ViewImports">
+    <Item Value="oracle.summit.model.polymorphicvo.views.SalespersonViewEx"/>
+  </AttrArray>
+  <Remote
+    Name="ServiceInterface"
+    ServerClassName="oracle.summit.model.polymorphicvo.service.server.serviceinterface.AppModuleServiceImpl"
+    ServerInterfaceName="oracle.summit.model.polymorphicvo.service.common.serviceinterface.AppModuleService">
+    <DesignTime>
+      <Attr Name="_webServiceName" Value="AppModuleService"/>
+      <Attr Name="_targetNameSpace" Value="http://xmlns.oracle.com/apps/hr/service/"/>
+    </DesignTime>
+  </Remote>
+  <ServiceViewUsage
+    ViewUsageName="SDeptView1"
+    CanCreate="true"
+    CanUpdate="true"
+    CanDelete="true"
+    CanMerge="true">
+    <DesignTime>
+      <Attr Name="_DeleteOpName" Value="deleteSDeptView1"/>
+      <Attr Name="_GetOpName" Value="getSDeptView1"/>
+      <Attr Name="_MergeOpName" Value="mergeSDeptView1"/>
+      <Attr Name="_FindOpName" Value="findSDeptView1"/>
+      <Attr Name="_UpdateOpName" Value="updateSDeptView1"/>
+      <Attr Name="_ProcessOpName" Value="processSDeptView1"/>
+      <Attr Name="_CreateOpName" Value="createSDeptView1"/>
+    </DesignTime>
+  </ServiceViewUsage>
+  <ServiceViewUsage
+    ViewUsageName="SEmpView1"
+    CanCreate="true"
+    CanUpdate="true"
+    CanDelete="true"
+    CanMerge="true">
+    <DesignTime>
+      <Attr Name="_DeleteOpName" Value="deleteSEmpView1"/>
+      <AttrArray Name="_VCFindOps">
+        <Item Value="ByDept"/>
+      </AttrArray>
+      <Attr Name="_GetOpName" Value="getSEmpView1"/>
+      <Attr Name="_MergeOpName" Value="mergeSEmpView1"/>
+      <AttrArray Name="__ByDept">
+        <Item Value="findSEmpView1ByDept"/>
+        <Item Value="bv_dName"/>
+      </AttrArray>
+      <Attr Name="_FindOpName" Value="findSEmpView1"/>
+      <Attr Name="_UpdateOpName" Value="updateSEmpView1"/>
+      <Attr Name="_ProcessOpName" Value="processSEmpView1"/>
+      <Attr Name="_CreateOpName" Value="createSEmpView1"/>
+    </DesignTime>
+  </ServiceViewUsage>
+</AppModule>

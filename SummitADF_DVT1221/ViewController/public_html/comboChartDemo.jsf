@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="comboChartDemo.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <dvt:comboChart id="comboChart1" var="row" value="#{bindings.SInventoryView1.collectionModel}"
+                            dataSelection="multiple">
+                <f:facet name="dataStamp">
+                    <af:group id="g1">
+                        <dvt:chartDataItem id="di1" value="#{row.AmountInStock}" group="#{row.Name}"
+                                           series="#{bindings.SInventoryView1.hints.AmountInStock.label}"/>
+                        <dvt:chartDataItem id="di2" value="#{row.MaxInStock}" group="#{row.Name}"
+                                           series="#{bindings.SInventoryView1.hints.MaxInStock.label}"/>
+                        <dvt:chartDataItem id="di3" value="#{row.ReorderPoint}" group="#{row.Name}"
+                                           series="#{bindings.SInventoryView1.hints.ReorderPoint.label}"/>
+                    </af:group>
+                </f:facet>
+            </dvt:comboChart>
+        </af:form>
+    </af:document>
+</f:view>

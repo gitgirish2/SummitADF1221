@@ -1,0 +1,46 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="/oracle/summit/model/rowfinder/common/types/"
+     xmlns:tns="/oracle/summit/model/rowfinder/common/types/" xmlns:ns0="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:ns1="/oracle/summit/model/rowfinder/common/">
+    <import namespace="/oracle/summit/model/rowfinder/common/" schemaLocation="../EmpViewSDO.xsd"/>
+    <import namespace="http://xmlns.oracle.com/adf/svc/errors/" schemaLocation="classpath:/META-INF/wsdl/ServiceException.xsd"/>
+    <element name="createEmpView1">
+        <complexType>
+            <sequence>
+                <element name="empView1" type="ns1:EmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createEmpView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:EmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateEmpView1">
+        <complexType>
+            <sequence>
+                <element name="empView1" type="ns1:EmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateEmpView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:EmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteEmpView1">
+        <complexType>
+            <sequence>
+                <element name="empView1" type="ns1:EmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteEmpView1Response">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+</schema>

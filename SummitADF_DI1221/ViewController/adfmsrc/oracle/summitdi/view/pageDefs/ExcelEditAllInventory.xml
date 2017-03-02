@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.8.1" id="ExcelEditAllInventory"
+                Package="oracle.summitdi.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="InventoryWarehouseView" RangeSize="25" DataControl="SummitAppModuleDataControl"
+              id="InventoryWarehouseViewIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="InventoryWarehouseViewIterator" id="InventoryWarehouseView">
+      <nodeDefinition DefName="oracle.summitdi.model.queries.InventoryWarehouseView" Name="InventoryWarehouseView0">
+        <AttrNames>
+          <Item Value="AmountInStock"/>
+          <Item Value="Address"/>
+          <Item Value="City"/>
+          <Item Value="MaxInStock"/>
+          <Item Value="WarehouseId"/>
+          <Item Value="OutOfStockExplanation"/>
+          <Item Value="ProductId"/>
+          <Item Value="ReorderPoint"/>
+          <Item Value="RestockDate"/>
+          <Item Value="State"/>
+          <Item Value="ZipCode"/>
+          <Item Value="Country"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="InventoryWarehouseViewIterator" id="Execute"
+            InstanceName="SummitAppModuleDataControl.InventoryWarehouseView"
+            DataControl="SummitAppModuleDataControl" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action id="Commit" DataControl="SummitAppModuleDataControl" RequiresUpdateModel="true"
+            Action="commitTransaction"/>
+    <action IterBinding="InventoryWarehouseViewIterator" id="Delete"
+            InstanceName="SummitAppModuleDataControl.InventoryWarehouseView"
+            DataControl="SummitAppModuleDataControl" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

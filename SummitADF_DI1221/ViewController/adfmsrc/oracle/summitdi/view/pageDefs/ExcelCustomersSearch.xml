@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.1.63.3" id="ExcelCustomersSearch"
+                Package="oracle.summitdi.view.pageDefs">
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator id="CustomersIterator" Binds="CustomersSearchView" DataControl="SummitAppModuleDataControl"
+              RangeSize="25"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomersIterator" id="Customers">
+      <nodeDefinition DefName="oracle.summitdi.model.queries.readonly.CustomersSearchView" Name="Customers0">
+        <AttrNames>
+          <Item Value="Address"/>
+          <Item Value="City"/>
+          <Item Value="Comments"/>
+          <Item Value="RegionName"/>
+          <Item Value="Country"/>
+          <Item Value="Name"/>
+          <Item Value="Phone"/>
+          <Item Value="SalesRep"/>
+          <Item Value="State"/>
+          <Item Value="ZipCode"/>
+          <Item Value="CreditRating1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="CustomersIterator" id="Execute" InstanceName="SummitAppModuleDataControl.Customers"
+            DataControl="SummitAppModuleDataControl" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <methodAction id="resetQueryValues" RequiresUpdateModel="true" Action="invokeMethod" MethodName="resetQueryValues"
+                  IsViewObjectMethod="true" DataControl="SummitAppModuleDataControl"
+                  InstanceName="data.SummitAppModuleDataControl.CustomersSearchView"/>
+  </bindings>
+</pageDefinition>

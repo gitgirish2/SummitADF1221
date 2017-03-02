@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="AppModuleService" targetNamespace="http://xmlns.oracle.com/apps/hr/service/" xmlns:tns="http://xmlns.oracle.com/apps/hr/service/" xmlns:types="http://xmlns.oracle.com/apps/hr/service/types/" xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="fast_infoset_service_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsOptfiser:OptimizedFastInfosetSerialization enabled="true" xmlns:wsOptfiser="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service"/>
+  </wsp:Policy>
+  <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="ServiceException.wsdl"/>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://xmlns.oracle.com/apps/hr/service/types/" schemaLocation="AppModuleService.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="AppModuleService_getSDeptView1">
+    <wsdl:part name="parameters" element="types:getSDeptView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_getSDeptView1Response">
+    <wsdl:part name="parameters" element="types:getSDeptView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_createSDeptView1">
+    <wsdl:part name="parameters" element="types:createSDeptView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_createSDeptView1Response">
+    <wsdl:part name="parameters" element="types:createSDeptView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_updateSDeptView1">
+    <wsdl:part name="parameters" element="types:updateSDeptView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_updateSDeptView1Response">
+    <wsdl:part name="parameters" element="types:updateSDeptView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_deleteSDeptView1">
+    <wsdl:part name="parameters" element="types:deleteSDeptView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_deleteSDeptView1Response">
+    <wsdl:part name="parameters" element="types:deleteSDeptView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_mergeSDeptView1">
+    <wsdl:part name="parameters" element="types:mergeSDeptView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_mergeSDeptView1Response">
+    <wsdl:part name="parameters" element="types:mergeSDeptView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_findSDeptView1">
+    <wsdl:part name="parameters" element="types:findSDeptView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_findSDeptView1Response">
+    <wsdl:part name="parameters" element="types:findSDeptView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_processSDeptView1">
+    <wsdl:part name="parameters" element="types:processSDeptView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_processSDeptView1Response">
+    <wsdl:part name="parameters" element="types:processSDeptView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_getSEmpView1">
+    <wsdl:part name="parameters" element="types:getSEmpView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_getSEmpView1Response">
+    <wsdl:part name="parameters" element="types:getSEmpView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_createSEmpView1">
+    <wsdl:part name="parameters" element="types:createSEmpView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_createSEmpView1Response">
+    <wsdl:part name="parameters" element="types:createSEmpView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_updateSEmpView1">
+    <wsdl:part name="parameters" element="types:updateSEmpView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_updateSEmpView1Response">
+    <wsdl:part name="parameters" element="types:updateSEmpView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_deleteSEmpView1">
+    <wsdl:part name="parameters" element="types:deleteSEmpView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_deleteSEmpView1Response">
+    <wsdl:part name="parameters" element="types:deleteSEmpView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_mergeSEmpView1">
+    <wsdl:part name="parameters" element="types:mergeSEmpView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_mergeSEmpView1Response">
+    <wsdl:part name="parameters" element="types:mergeSEmpView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_findSEmpView1">
+    <wsdl:part name="parameters" element="types:findSEmpView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_findSEmpView1Response">
+    <wsdl:part name="parameters" element="types:findSEmpView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_findSEmpView1ByDept">
+    <wsdl:part name="parameters" element="types:findSEmpView1ByDept"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_findSEmpView1ByDeptResponse">
+    <wsdl:part name="parameters" element="types:findSEmpView1ByDeptResponse"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_processSEmpView1">
+    <wsdl:part name="parameters" element="types:processSEmpView1"/>
+  </wsdl:message>
+  <wsdl:message name="AppModuleService_processSEmpView1Response">
+    <wsdl:part name="parameters" element="types:processSEmpView1Response"/>
+  </wsdl:message>
+  <wsdl:portType name="AppModuleService">
+    <wsdl:documentation>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="SDeptView1" xmlns:ns0="/oracle/summit/model/polymorphicvo/views/common/" SDOName="ns0:SDeptViewSDO" CreateOpName="createSDeptView1" UpdateOpName="updateSDeptView1" DeleteOpName="deleteSDeptView1" MergeOpName="mergeSDeptView1" GetOpName="getSDeptView1" FindOpName="findSDeptView1" ProcessOpName="processSDeptView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="SEmpView1" xmlns:ns0="/oracle/summit/model/polymorphicvo/views/common/" SDOName="ns0:SEmpViewSDO" CreateOpName="createSEmpView1" UpdateOpName="updateSEmpView1" DeleteOpName="deleteSEmpView1" MergeOpName="mergeSEmpView1" GetOpName="getSEmpView1" FindOpName="findSEmpView1" ProcessOpName="processSEmpView1"/>
+    </wsdl:documentation>
+    <wsdl:operation name="getSDeptView1">
+      <wsdl:input message="tns:AppModuleService_getSDeptView1"/>
+      <wsdl:output message="tns:AppModuleService_getSDeptView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="createSDeptView1">
+      <wsdl:input message="tns:AppModuleService_createSDeptView1"/>
+      <wsdl:output message="tns:AppModuleService_createSDeptView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateSDeptView1">
+      <wsdl:input message="tns:AppModuleService_updateSDeptView1"/>
+      <wsdl:output message="tns:AppModuleService_updateSDeptView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSDeptView1">
+      <wsdl:input message="tns:AppModuleService_deleteSDeptView1"/>
+      <wsdl:output message="tns:AppModuleService_deleteSDeptView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="mergeSDeptView1">
+      <wsdl:input message="tns:AppModuleService_mergeSDeptView1"/>
+      <wsdl:output message="tns:AppModuleService_mergeSDeptView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findSDeptView1">
+      <wsdl:input message="tns:AppModuleService_findSDeptView1"/>
+      <wsdl:output message="tns:AppModuleService_findSDeptView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="processSDeptView1">
+      <wsdl:input message="tns:AppModuleService_processSDeptView1"/>
+      <wsdl:output message="tns:AppModuleService_processSDeptView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getSEmpView1">
+      <wsdl:input message="tns:AppModuleService_getSEmpView1"/>
+      <wsdl:output message="tns:AppModuleService_getSEmpView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="createSEmpView1">
+      <wsdl:input message="tns:AppModuleService_createSEmpView1"/>
+      <wsdl:output message="tns:AppModuleService_createSEmpView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateSEmpView1">
+      <wsdl:input message="tns:AppModuleService_updateSEmpView1"/>
+      <wsdl:output message="tns:AppModuleService_updateSEmpView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSEmpView1">
+      <wsdl:input message="tns:AppModuleService_deleteSEmpView1"/>
+      <wsdl:output message="tns:AppModuleService_deleteSEmpView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="mergeSEmpView1">
+      <wsdl:input message="tns:AppModuleService_mergeSEmpView1"/>
+      <wsdl:output message="tns:AppModuleService_mergeSEmpView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findSEmpView1">
+      <wsdl:input message="tns:AppModuleService_findSEmpView1"/>
+      <wsdl:output message="tns:AppModuleService_findSEmpView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findSEmpView1ByDept">
+      <wsdl:input message="tns:AppModuleService_findSEmpView1ByDept"/>
+      <wsdl:output message="tns:AppModuleService_findSEmpView1ByDeptResponse"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="processSEmpView1">
+      <wsdl:input message="tns:AppModuleService_processSEmpView1"/>
+      <wsdl:output message="tns:AppModuleService_processSEmpView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AppModuleServiceSoapHttp" type="tns:AppModuleService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#fast_infoset_service_policy" wsdl:required="false"/>
+    <wsdl:operation name="getSDeptView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/getSDeptView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createSDeptView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/createSDeptView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateSDeptView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/updateSDeptView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSDeptView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/deleteSDeptView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mergeSDeptView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/mergeSDeptView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findSDeptView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/findSDeptView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="processSDeptView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/processSDeptView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSEmpView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/getSEmpView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createSEmpView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/createSEmpView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateSEmpView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/updateSEmpView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSEmpView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/deleteSEmpView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mergeSEmpView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/mergeSEmpView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findSEmpView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/findSEmpView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findSEmpView1ByDept">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/findSEmpView1ByDept"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="processSEmpView1">
+      <soap:operation soapAction="http://xmlns.oracle.com/apps/hr/service/processSEmpView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AppModuleService">
+    <wsdl:port name="AppModuleServiceSoapHttpPort" binding="tns:AppModuleServiceSoapHttp">
+      <soap:address location="http://127.0.0.1:7101/SummitADF-Model-context-root/AppModuleService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

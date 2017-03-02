@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="bubbleChartDemo.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <dvt:bubbleChart id="bubbleChart1" var="row" value="#{bindings.SalesRepViewObj3.collectionModel}"
+                             dataSelection="multiple">
+                <dvt:chartLegend id="cl1" rendered="true">
+                    <dvt:legendSection id="ls1" source="ag1"/>
+                </dvt:chartLegend>
+                <f:facet name="dataStamp">
+                    <dvt:chartDataItem id="di1" group="#{row.LastName}" x="#{row.CommissionPct}" y="#{row.Salary}"
+                                       z="#{row.TotalSales}">
+                        <dvt:attributeGroups id="ag1" value="#{row.LastName}" type="color"/>
+                    </dvt:chartDataItem>
+                </f:facet>
+            </dvt:bubbleChart>
+        </af:form>
+    </af:document>
+</f:view>

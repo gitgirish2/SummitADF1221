@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workbook id="6d2e8f37-1737-4a19-8c9b-964cc0d329b3" schema-version="1" xmlns="http://xmlns.oracle.com/adf/desktopintegration/workbook">
+  <!--source-document="EditWarehouseInventory.xlsx" client-version="12.2.1.0.0.65534"-->
+  <resource-list>
+    <resource>
+      <alias>res</alias>
+      <class>oracle.summitdi.resources.UIResources</class>
+    </resource>
+  </resource-list>
+  <branding-list>
+    <branding>
+      <name>Application Name</name>
+      <value>#{res['summitdi.general.branding.copyright']}</value>
+    </branding>
+    <branding>
+      <name>Version</name>
+      <value>#{res['summitdi.general.branding.version']}</value>
+    </branding>
+    <branding>
+      <name>Workbook Name</name>
+      <value>#{res['excel.warehouses.title']}</value>
+    </branding>
+    <branding>
+      <name>Workbook Version</name>
+      <value>#{res['summitdi.general.branding.version']}</value>
+    </branding>
+    <branding>
+      <name>Copyright</name>
+      <value>#{res['summitdi.general.branding.copyright']}</value>
+    </branding>
+  </branding-list>
+  <remote-servlet-path>/adfdiRemoteServlet</remote-servlet-path>
+  <web-app-root>http://127.0.0.1:7101/summit/</web-app-root>
+  <application-home-folder></application-home-folder>
+  <web-pages-folder></web-pages-folder>
+  <runtime-ribbon-tab>
+    <title>#{res['excel.warehouses.sheet.title']}</title>
+    <command-list>
+      <command method="Login" />
+      <command method="Logout" />
+      <command method="ClearAllData" />
+      <command method="EditOptions" />
+      <command method="ViewAboutDialog" />
+      <command method="ToggleStatusViewer" />
+    </command-list>
+  </runtime-ribbon-tab>
+  <parameter-list>
+    <parameter>
+      <id>WarehouseId</id>
+    </parameter>
+  </parameter-list>
+  <worksheet-list>
+    <worksheet name="Warehouse Inventory">
+      <event-list>
+        <event invoke-once-only="true" type="Startup">
+          <action-set>
+            <status mode="MainBarOnly">
+              <title>#{res['excel.warehouses.sheet.title']}</title>
+              <message>#{res['excel.warehouses.startup.message']}</message>
+            </status>
+            <action-list>
+              <worksheet-action>
+                <method>DownSync</method>
+              </worksheet-action>
+              <server-action>
+                <action-id>Execute</action-id>
+              </server-action>
+              <component-action>
+                <component-id>TAB508498405</component-id>
+                <action>Download</action>
+              </component-action>
+            </action-list>
+          </action-set>
+        </event>
+      </event-list>
+      <ribbon-command-list>
+        <ribbon-command id="MEN1368247122">
+          <select-action-set>
+            <status mode="MainBarOnly">
+              <title>#{res['excel.warehouses.sheet.title']}</title>
+              <message>#{res['excel.warehouses.ribbon.save.message']}</message>
+            </status>
+            <action-list>
+              <worksheet-action>
+                <method>UpSync</method>
+              </worksheet-action>
+              <server-action>
+                <action-id>Commit</action-id>
+                <annotation>Commit required to save changes to the form when there are no changes to the table</annotation>
+              </server-action>
+              <component-action>
+                <component-id>TAB508498405</component-id>
+                <action>Upload</action>
+              </component-action>
+            </action-list>
+          </select-action-set>
+          <label>#{res['excel.warehouses.ribbon.save']}</label>
+          <tooltip>#{res['excel.warehouses.ribbon.save.tooltip']}</tooltip>
+          <image>Upload</image>
+        </ribbon-command>
+        <ribbon-command id="MEN1350563892">
+          <select-action-set>
+            <status mode="MainBarOnly">
+              <title>#{res['excel.warehouses.sheet.title']}</title>
+              <message>#{res['excel.warehouses.ribbon.revert.message']}</message>
+            </status>
+            <action-list>
+              <confirmation-action>
+                <prompt>#{res['excel.warehouses.ribbon.revert.confirmation.prompt']}</prompt>
+                <title>#{res['excel.warehouses.ribbon.revert.confirmation.title']}</title>
+              </confirmation-action>
+              <component-action>
+                <component-id>TAB508498405</component-id>
+                <action>MarkAllRowsUnchanged</action>
+                <annotation>Marking rows as unchanged prevents an additional prompt during table download</annotation>
+              </component-action>
+              <worksheet-action>
+                <method>DownSync</method>
+              </worksheet-action>
+              <server-action>
+                <action-id>Execute</action-id>
+              </server-action>
+              <component-action>
+                <component-id>TAB508498405</component-id>
+                <action>Download</action>
+              </component-action>
+            </action-list>
+          </select-action-set>
+          <label>#{res['excel.warehouses.ribbon.revert']}</label>
+          <tooltip>#{res['excel.warehouses.ribbon.revert.tooltip']}</tooltip>
+          <image>Download</image>
+        </ribbon-command>
+      </ribbon-command-list>
+      <server-context send-parameters="true" />
+      <title>#{res['excel.warehouses.sheet.title']}</title>
+      <pagedef-usage-id>ExcelWarehouseInventory</pagedef-usage-id>
+      <parameter-list>
+        <parameter>
+          <value>#{workbook.params.WarehouseId}</value>
+          <pagedef-param-id>WarehouseIdParam</pagedef-param-id>
+        </parameter>
+      </parameter-list>
+      <protection>
+        <mode>Automatic</mode>
+      </protection>
+      <setup-action-id>FilterWarehouseMasterById</setup-action-id>
+      <component-list>
+        <label-component id="LBL1750067489" origin="D1">
+          <label>#{res['excel.warehouses.title']}</label>
+          <style>Branding Area</style>
+        </label-component>
+        <image-component id="IMG220851331" origin="B1">
+          <source>/images/oracle_logo_sm.png</source>
+          <short-desc>Oracle Logo</short-desc>
+        </image-component>
+        <label-component id="LBL2027347411" origin="B5">
+          <label>#{bindings.Id.label}</label>
+          <style>Label</style>
+        </label-component>
+        <output-text-component id="OTX1126847745" origin="D5">
+          <output-text>
+            <value>#{bindings.Id}</value>
+          </output-text>
+          <style>Output Text</style>
+          <tooltip>#{bindings.Id.hints.tooltip}</tooltip>
+        </output-text-component>
+        <label-component id="LBL26136957" origin="B6">
+          <label>#{bindings.Address.label}</label>
+          <style>Label</style>
+        </label-component>
+        <input-text-component id="ITX1233880914" origin="D6">
+          <input-text>
+            <value>#{bindings.Address}</value>
+            <read-only>False</read-only>
+          </input-text>
+          <style>Input Text</style>
+          <tooltip>#{bindings.Address.hints.tooltip}</tooltip>
+        </input-text-component>
+        <label-component id="LBL851718996" origin="B7">
+          <label>#{bindings.City.label}</label>
+          <style>Label</style>
+        </label-component>
+        <input-text-component id="ITX1480148058" origin="D7">
+          <input-text>
+            <value>#{bindings.City}</value>
+            <read-only>False</read-only>
+          </input-text>
+          <style>Input Text</style>
+          <tooltip>#{bindings.City.hints.tooltip}</tooltip>
+        </input-text-component>
+        <label-component id="LBL785348828" origin="B8">
+          <label>#{bindings.State.label}</label>
+          <style>Label</style>
+        </label-component>
+        <input-text-component id="ITX1504538712" origin="D8">
+          <input-text>
+            <value>#{bindings.State}</value>
+            <read-only>False</read-only>
+          </input-text>
+          <style>Input Text</style>
+          <tooltip>#{bindings.State.hints.tooltip}</tooltip>
+        </input-text-component>
+        <label-component id="LBL185415937" origin="B9">
+          <label>#{bindings.ZipCode.label}</label>
+          <style>Label</style>
+        </label-component>
+        <input-text-component id="ITX592390165" origin="D9">
+          <input-text>
+            <value>#{bindings.ZipCode}</value>
+            <read-only>False</read-only>
+          </input-text>
+          <style>Input Text</style>
+          <tooltip>#{bindings.ZipCode.hints.tooltip}</tooltip>
+        </input-text-component>
+        <label-component id="LBL340060384" origin="F6">
+          <label>#{bindings.RegionId.label}</label>
+          <style>Label</style>
+        </label-component>
+        <list-of-values-component id="LST1852617444" origin="H6">
+          <list-of-values>
+            <list-id>RegionId</list-id>
+            <read-only>False</read-only>
+          </list-of-values>
+          <style>Input Text</style>
+          <tooltip>#{bindings.RegionId.hints.tooltip}</tooltip>
+        </list-of-values-component>
+        <label-component id="LBL696111132" origin="F7">
+          <label>#{bindings.CountryId.label}</label>
+          <style>Label</style>
+        </label-component>
+        <list-of-values-component id="LST916347942" origin="H7">
+          <list-of-values>
+            <list-id>CountryId</list-id>
+            <depends-on-list-id>RegionId</depends-on-list-id>
+            <read-only>False</read-only>
+          </list-of-values>
+          <style>Input Text</style>
+          <tooltip>#{bindings.CountryId.hints.tooltip}</tooltip>
+        </list-of-values-component>
+        <label-component id="LBL972804483" origin="F8">
+          <label>#{bindings.ManagerId.label}</label>
+          <style>Label</style>
+        </label-component>
+        <list-of-values-component id="LST984015579" origin="H8">
+          <list-of-values>
+            <list-id>ManagerId</list-id>
+            <read-only>False</read-only>
+          </list-of-values>
+          <style>Input Text</style>
+          <tooltip>#{bindings.ManagerId.hints.tooltip}</tooltip>
+        </list-of-values-component>
+        <label-component id="LBL930107229" origin="F9">
+          <label>#{bindings.Phone.label}</label>
+          <style>Label</style>
+        </label-component>
+        <input-text-component id="ITX1861321891" origin="H9">
+          <input-text>
+            <value>#{bindings.Phone}</value>
+            <read-only>False</read-only>
+          </input-text>
+          <style>Input Text</style>
+          <tooltip>#{bindings.Phone.hints.tooltip}</tooltip>
+        </input-text-component>
+        <output-text-component id="OTX686815757" origin="B3">
+          <output-text>
+            <value>#{res['excel.warehouses.header.warehouse']}</value>
+          </output-text>
+          <style>Form Header</style>
+        </output-text-component>
+        <output-text-component id="OTX546218817" origin="B12">
+          <output-text>
+            <value>#{res['excel.warehouses.header.inventory']}</value>
+          </output-text>
+          <style>Form Header</style>
+        </output-text-component>
+        <table-component id="TAB508498405" origin="B13">
+          <tree-id>InventoryDetail</tree-id>
+          <column-list>
+            <column id="_ADF_ChangedColumn">
+              <update-component>
+                <output-text />
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>12</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{_ADFDIres['COMPONENTS_TABLE_CHANGED_COL_LABEL']}</header-label>
+              <cell-style>Indicator Cell</cell-style>
+            </column>
+            <column id="_ADF_StatusColumn">
+              <update-component>
+                <output-text>
+                  <double-click-action-set>
+                    <status enabled="false" />
+                    <action-list>
+                      <component-action>
+                        <component-id>TAB508498405</component-id>
+                        <action>DisplayRowErrors</action>
+                      </component-action>
+                    </action-list>
+                  </double-click-action-set>
+                </output-text>
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>18</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{_ADFDIres['COMPONENTS_TABLE_STATUS_COL_LABEL']}</header-label>
+              <cell-style>Status Cell</cell-style>
+            </column>
+            <column id="ProductId">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.ProductId.inputValue}</value>
+                  <read-only>#{bindings.InventoryDetail.hints.ProductId.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>20</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryDetail.hints.ProductId.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.InventoryDetail.hints.ProductId.tooltip}</tooltip>
+            </column>
+            <column id="AmountInStock">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.AmountInStock.inputValue}</value>
+                  <read-only>#{bindings.InventoryDetail.hints.AmountInStock.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>20</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryDetail.hints.AmountInStock.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryDetail.hints.AmountInStock.tooltip}</tooltip>
+            </column>
+            <column id="ReorderPoint">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.ReorderPoint.inputValue}</value>
+                  <read-only>#{bindings.InventoryDetail.hints.ReorderPoint.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>15</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryDetail.hints.ReorderPoint.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryDetail.hints.ReorderPoint.tooltip}</tooltip>
+            </column>
+            <column id="MaxInStock">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.MaxInStock.inputValue}</value>
+                  <read-only>#{bindings.InventoryDetail.hints.MaxInStock.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>15</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryDetail.hints.MaxInStock.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryDetail.hints.MaxInStock.tooltip}</tooltip>
+            </column>
+            <column id="OutOfStockExplanation">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.OutOfStockExplanation.inputValue}</value>
+                  <read-only>#{bindings.InventoryDetail.hints.OutOfStockExplanation.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>25</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryDetail.hints.OutOfStockExplanation.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryDetail.hints.OutOfStockExplanation.tooltip}</tooltip>
+            </column>
+            <column id="RestockDate">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.RestockDate.inputValue}</value>
+                  <read-only>#{bindings.InventoryDetail.hints.RestockDate.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>15</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.InventoryDetail.hints.RestockDate.label}</header-label>
+              <cell-style>Data Cell</cell-style>
+              <tooltip>#{bindings.InventoryDetail.hints.RestockDate.tooltip}</tooltip>
+            </column>
+            <column id="_ADF_RowKeyColumn">
+              <update-component>
+                <output-text />
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>11</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{_ADFDIres['COMPONENTS_TABLE_ROWKEY_COL_LABEL']}</header-label>
+              <cell-style>Key Cell</cell-style>
+            </column>
+          </column-list>
+          <display-upload-options>false</display-upload-options>
+          <batch-options>
+            <commit-action>Commit</commit-action>
+          </batch-options>
+          <row-limit>
+            <max-rows>500</max-rows>
+          </row-limit>
+        </table-component>
+      </component-list>
+    </worksheet>
+  </worksheet-list>
+  <compatibility>
+    <table-components>
+      <model-driven-columns>
+        <date-picker-enabled>true</date-picker-enabled>
+        <input-lov-picker-enabled>true</input-lov-picker-enabled>
+      </model-driven-columns>
+      <row-action-set-model-mgmt-enabled>true</row-action-set-model-mgmt-enabled>
+      <smart-row-failure-reporting-enabled>true</smart-row-failure-reporting-enabled>
+    </table-components>
+    <data-entry-validation-enabled>true</data-entry-validation-enabled>
+  </compatibility>
+  <auto-display-status-viewer-enabled>true</auto-display-status-viewer-enabled>
+</workbook>

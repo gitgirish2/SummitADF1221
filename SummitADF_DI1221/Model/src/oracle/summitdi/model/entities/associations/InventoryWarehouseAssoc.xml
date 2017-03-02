@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="InventoryWarehouseAssoc"
+  Version="12.2.1.22.31"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Warehouse"
+    Cardinality="1"
+    Source="true"
+    Owner="oracle.summitdi.model.entities.Warehouse">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Warehouse"/>
+      <Attr Name="_foreignKey" Value="oracle.summitdi.model.entities.Warehouse.SWarehouseIdPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.summitdi.model.entities.Warehouse.Id"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Inventory1"
+    Cardinality="-1"
+    Owner="oracle.summitdi.model.entities.Inventory">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Inventory1"/>
+      <Attr Name="_foreignKey" Value="oracle.summitdi.model.entities.Inventory.SInventoryWarehouseIdFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.summitdi.model.entities.Inventory.WarehouseId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

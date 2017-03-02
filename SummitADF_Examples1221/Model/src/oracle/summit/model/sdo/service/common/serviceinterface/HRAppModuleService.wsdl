@@ -1,0 +1,381 @@
+<wsdl:definitions
+     name="HRAppModuleService"
+     targetNamespace="/oracle/summit/model/sdo/service/common/"
+     xmlns:tns="/oracle/summit/model/sdo/service/common/"
+     xmlns:types="/oracle/summit/model/sdo/service/common/types/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="classpath:/META-INF/wsdl/ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="/oracle/summit/model/sdo/service/common/types/" schemaLocation="HRAppModuleService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="HRAppModuleService_getDeptView1">
+        <wsdl:part name="parameters" element="types:getDeptView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_getDeptView1Response">
+        <wsdl:part name="parameters" element="types:getDeptView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_createDeptView1">
+        <wsdl:part name="parameters" element="types:createDeptView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_createDeptView1Response">
+        <wsdl:part name="parameters" element="types:createDeptView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_updateDeptView1">
+        <wsdl:part name="parameters" element="types:updateDeptView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_updateDeptView1Response">
+        <wsdl:part name="parameters" element="types:updateDeptView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_deleteDeptView1">
+        <wsdl:part name="parameters" element="types:deleteDeptView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_deleteDeptView1Response">
+        <wsdl:part name="parameters" element="types:deleteDeptView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_mergeDeptView1">
+        <wsdl:part name="parameters" element="types:mergeDeptView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_mergeDeptView1Response">
+        <wsdl:part name="parameters" element="types:mergeDeptView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_findDeptView1">
+        <wsdl:part name="parameters" element="types:findDeptView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_findDeptView1Response">
+        <wsdl:part name="parameters" element="types:findDeptView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_processDeptView1">
+        <wsdl:part name="parameters" element="types:processDeptView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_processDeptView1Response">
+        <wsdl:part name="parameters" element="types:processDeptView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_getEmpView1">
+        <wsdl:part name="parameters" element="types:getEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_getEmpView1Response">
+        <wsdl:part name="parameters" element="types:getEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_createEmpView1">
+        <wsdl:part name="parameters" element="types:createEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_createEmpView1Response">
+        <wsdl:part name="parameters" element="types:createEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_updateEmpView1">
+        <wsdl:part name="parameters" element="types:updateEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_updateEmpView1Response">
+        <wsdl:part name="parameters" element="types:updateEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_deleteEmpView1">
+        <wsdl:part name="parameters" element="types:deleteEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_deleteEmpView1Response">
+        <wsdl:part name="parameters" element="types:deleteEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_mergeEmpView1">
+        <wsdl:part name="parameters" element="types:mergeEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_mergeEmpView1Response">
+        <wsdl:part name="parameters" element="types:mergeEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_findEmpView1">
+        <wsdl:part name="parameters" element="types:findEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_findEmpView1Response">
+        <wsdl:part name="parameters" element="types:findEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_findEmpView1ByDeptVC">
+        <wsdl:part name="parameters" element="types:findEmpView1ByDeptVC"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_findEmpView1ByDeptVCResponse">
+        <wsdl:part name="parameters" element="types:findEmpView1ByDeptVCResponse"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_processEmpView1">
+        <wsdl:part name="parameters" element="types:processEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="HRAppModuleService_processEmpView1Response">
+        <wsdl:part name="parameters" element="types:processEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:portType name="HRAppModuleService">
+        <wsdl:documentation>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="DeptView1" xmlns:ns0="/oracle/summit/model/sdo/views/common/"
+                 SDOName="ns0:DeptViewSDO" CreateOpName="createDeptView1" UpdateOpName="updateDeptView1"
+                 DeleteOpName="deleteDeptView1" MergeOpName="mergeDeptView1" GetOpName="getDeptView1"
+                 FindOpName="findDeptView1" ProcessOpName="processDeptView1"/>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="EmpView1" xmlns:ns0="/oracle/summit/model/sdo/views/common/"
+                 SDOName="ns0:EmpViewSDO" CreateOpName="createEmpView1" UpdateOpName="updateEmpView1"
+                 DeleteOpName="deleteEmpView1" MergeOpName="mergeEmpView1" GetOpName="getEmpView1"
+                 FindOpName="findEmpView1" ProcessOpName="processEmpView1"/>
+        </wsdl:documentation>
+        <wsdl:operation name="getDeptView1">
+            <wsdl:input message="tns:HRAppModuleService_getDeptView1"/>
+            <wsdl:output message="tns:HRAppModuleService_getDeptView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createDeptView1">
+            <wsdl:input message="tns:HRAppModuleService_createDeptView1"/>
+            <wsdl:output message="tns:HRAppModuleService_createDeptView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateDeptView1">
+            <wsdl:input message="tns:HRAppModuleService_updateDeptView1"/>
+            <wsdl:output message="tns:HRAppModuleService_updateDeptView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteDeptView1">
+            <wsdl:input message="tns:HRAppModuleService_deleteDeptView1"/>
+            <wsdl:output message="tns:HRAppModuleService_deleteDeptView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeDeptView1">
+            <wsdl:input message="tns:HRAppModuleService_mergeDeptView1"/>
+            <wsdl:output message="tns:HRAppModuleService_mergeDeptView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findDeptView1">
+            <wsdl:input message="tns:HRAppModuleService_findDeptView1"/>
+            <wsdl:output message="tns:HRAppModuleService_findDeptView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processDeptView1">
+            <wsdl:input message="tns:HRAppModuleService_processDeptView1"/>
+            <wsdl:output message="tns:HRAppModuleService_processDeptView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getEmpView1">
+            <wsdl:input message="tns:HRAppModuleService_getEmpView1"/>
+            <wsdl:output message="tns:HRAppModuleService_getEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createEmpView1">
+            <wsdl:input message="tns:HRAppModuleService_createEmpView1"/>
+            <wsdl:output message="tns:HRAppModuleService_createEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateEmpView1">
+            <wsdl:input message="tns:HRAppModuleService_updateEmpView1"/>
+            <wsdl:output message="tns:HRAppModuleService_updateEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteEmpView1">
+            <wsdl:input message="tns:HRAppModuleService_deleteEmpView1"/>
+            <wsdl:output message="tns:HRAppModuleService_deleteEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeEmpView1">
+            <wsdl:input message="tns:HRAppModuleService_mergeEmpView1"/>
+            <wsdl:output message="tns:HRAppModuleService_mergeEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findEmpView1">
+            <wsdl:input message="tns:HRAppModuleService_findEmpView1"/>
+            <wsdl:output message="tns:HRAppModuleService_findEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findEmpView1ByDeptVC">
+            <wsdl:input message="tns:HRAppModuleService_findEmpView1ByDeptVC"/>
+            <wsdl:output message="tns:HRAppModuleService_findEmpView1ByDeptVCResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processEmpView1">
+            <wsdl:input message="tns:HRAppModuleService_processEmpView1"/>
+            <wsdl:output message="tns:HRAppModuleService_processEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="HRAppModuleServiceSoapHttp" type="tns:HRAppModuleService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getDeptView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/getDeptView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createDeptView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/createDeptView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateDeptView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/updateDeptView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteDeptView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/deleteDeptView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="mergeDeptView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/mergeDeptView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findDeptView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/findDeptView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processDeptView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/processDeptView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/getEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/createEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/updateEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/deleteEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="mergeEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/mergeEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/findEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findEmpView1ByDeptVC">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/findEmpView1ByDeptVC"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/sdo/service/common/processEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="HRAppModuleService">
+        <wsdl:port name="HRAppModuleServiceSoapHttpPort" binding="tns:HRAppModuleServiceSoapHttp">
+            <soap:address location="http://localhost:7101/SummitADF-Model-context-root/HRAppModuleService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

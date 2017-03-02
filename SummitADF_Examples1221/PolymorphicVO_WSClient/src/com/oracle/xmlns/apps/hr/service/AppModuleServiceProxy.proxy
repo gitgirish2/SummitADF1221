@@ -1,0 +1,442 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="AppModuleService_Service.xml"/>
+      <url path="AppModuleService.wsdl"/>
+      <url path="datagraph.xsd"/>
+      <url path="sdoXML.xsd"/>
+      <url path="BC4JService.xsd"/>
+      <url path="sdoJava.xsd"/>
+      <url path="sdoModel.xsd"/>
+      <url path="AppModuleService.xsd"/>
+      <url path="ServiceException.wsdl"/>
+      <url path="SDeptViewSDO.xsd"/>
+      <url path="SalespersonViewExSDO.xsd"/>
+      <url path="ServiceException.xsd"/>
+      <url path="SEmpViewSDO.xsd"/>
+      <url path="types/GetSEmpView1Response.java"/>
+      <url path="AppModuleService.java"/>
+      <url path="types/MergeSEmpView1.java"/>
+      <url path="../../../../../../sdo/commonj/java/package-info.java"/>
+      <url path="../../../adf/svc/types/ChangeOperation.java"/>
+      <url path="types/UpdateSDeptView1Response.java"/>
+      <url path="../../../adf/svc/types/SortOrder.java"/>
+      <url path="../../../adf/svc/types/AttrCtrlHints.java"/>
+      <url path="types/UpdateSEmpView1.java"/>
+      <url path="../../../adf/svc/types/ReturnMode.java"/>
+      <url path="../../../adf/svc/errors/package-info.java"/>
+      <url path="../../../adf/svc/errors/ServiceDMLErrorMessage.java"/>
+      <url path="types/DeleteSEmpView1.java"/>
+      <url path="../../../../../../sdo/commonj/Type.java"/>
+      <url path="../../../adf/svc/types/ViewCriteriaRow.java"/>
+      <url path="types/ProcessSEmpView1Response.java"/>
+      <url path="types/DeleteSDeptView1.java"/>
+      <url path="../../../adf/svc/types/MethodResult.java"/>
+      <url path="../../../adf/svc/types/CtrlHint.java"/>
+      <url path="../../../adf/svc/types/ShortResult.java"/>
+      <url path="../../../adf/svc/types/ObjectFactory.java"/>
+      <url path="types/GetSDeptView1Response.java"/>
+      <url path="../../../adf/svc/types/SortAttribute.java"/>
+      <url path="types/FindSEmpView1ByDeptResponse.java"/>
+      <url path="types/FindSEmpView1.java"/>
+      <url path="../../../adf/svc/types/DataHandlerResult.java"/>
+      <url path="../../../../../../sdo/commonj/TextType.java"/>
+      <url path="../../../adf/svc/types/ByteResult.java"/>
+      <url path="../../../adf/svc/types/package-info.java"/>
+      <url path="../../../../../../sdo/commonj/XSDType.java"/>
+      <url path="../../../../../../sdo/commonj/ObjectFactory.java"/>
+      <url path="../../../../../../sdo/commonj/BaseDataGraphType.java"/>
+      <url path="types/package-info.java"/>
+      <url path="../../../../../../oracle/summit/model/polymorphicvo/views/common/SDeptViewSDO.java"/>
+      <url path="../../../../../../sdo/commonj/java/JavaInfo.java"/>
+      <url path="../../../adf/svc/types/DoubleResult.java"/>
+      <url path="../../../adf/svc/types/IntegerResult.java"/>
+      <url path="types/UpdateSEmpView1Response.java"/>
+      <url path="../../../adf/svc/types/TimeResult.java"/>
+      <url path="../../../adf/svc/types/BigIntegerResult.java"/>
+      <url path="types/ProcessSDeptView1Response.java"/>
+      <url path="types/CreateSEmpView1.java"/>
+      <url path="../../../../../../sdo/commonj/DataGraphType.java"/>
+      <url path="../../../../../../oracle/summit/model/polymorphicvo/views/common/SalespersonViewExSDO.java"/>
+      <url path="types/DeleteSEmpView1Response.java"/>
+      <url path="../../../adf/svc/types/ViewCriteriaItem.java"/>
+      <url path="types/FindSDeptView1.java"/>
+      <url path="../../../adf/svc/errors/ServiceMessage.java"/>
+      <url path="../../../../../../sdo/commonj/xml/ObjectFactory.java"/>
+      <url path="../../../../../../sdo/commonj/Property.java"/>
+      <url path="../../../adf/svc/types/BooleanResult.java"/>
+      <url path="types/MergeSEmpView1Response.java"/>
+      <url path="../../../adf/svc/errors/ObjectFactory.java"/>
+      <url path="../../../../../../sdo/commonj/ModelsType.java"/>
+      <url path="types/FindSEmpView1ByDept.java"/>
+      <url path="../../../adf/svc/types/StringResult.java"/>
+      <url path="../../../../../../sdo/commonj/xml/XMLInfo.java"/>
+      <url path="../../../adf/svc/errors/ServiceRowValErrorMessage.java"/>
+      <url path="types/MergeSDeptView1.java"/>
+      <url path="types/UpdateSDeptView1.java"/>
+      <url path="../../../../../../oracle/summit/model/polymorphicvo/views/common/ObjectFactory.java"/>
+      <url path="AppModuleServiceSoapHttpPortClient.java"/>
+      <url path="../../../adf/svc/types/LongResult.java"/>
+      <url path="../../../../../../sdo/commonj/DataObject.java"/>
+      <url path="types/MergeSDeptView1Response.java"/>
+      <url path="../../../../../../sdo/commonj/ChangeSummaryType.java"/>
+      <url path="types/DeleteSDeptView1Response.java"/>
+      <url path="../../../../../../sdo/commonj/java/ObjectFactory.java"/>
+      <url path="AppModuleService_Service.java"/>
+      <url path="../../../adf/svc/types/FindCriteria.java"/>
+      <url path="../../../adf/svc/types/BytesResult.java"/>
+      <url path="../../../adf/svc/types/TimestampResult.java"/>
+      <url path="../../../../../../oracle/summit/model/polymorphicvo/views/common/package-info.java"/>
+      <url path="../../../adf/svc/types/BigDecimalResult.java"/>
+      <url path="types/FindSEmpView1Response.java"/>
+      <url path="types/ProcessSDeptView1.java"/>
+      <url path="ServiceException.java"/>
+      <url path="../../../adf/svc/types/ViewCriteria.java"/>
+      <url path="../../../../../../sdo/commonj/xml/package-info.java"/>
+      <url path="../../../adf/svc/errors/ServiceAttrValErrorMessage.java"/>
+      <url path="../../../adf/svc/types/ObjAttrHints.java"/>
+      <url path="../../../adf/svc/types/DateResult.java"/>
+      <url path="../../../adf/svc/types/Conjunction.java"/>
+      <url path="types/GetSEmpView1.java"/>
+      <url path="../../../adf/svc/types/FindControl.java"/>
+      <url path="types/ObjectFactory.java"/>
+      <url path="types/CreateSDeptView1.java"/>
+      <url path="types/FindSDeptView1Response.java"/>
+      <url path="../../../adf/svc/types/ChildFindCriteria.java"/>
+      <url path="../../../adf/svc/types/MeasureType.java"/>
+      <url path="types/ProcessSEmpView1.java"/>
+      <url path="../../../../../../sdo/commonj/package-info.java"/>
+      <url path="../../../adf/svc/types/DataObjectResult.java"/>
+      <url path="../../../adf/svc/types/ServiceViewInfo.java"/>
+      <url path="../../../../../../sdo/commonj/Types.java"/>
+      <url path="../../../adf/svc/types/ProcessControl.java"/>
+      <url path="types/GetSDeptView1.java"/>
+      <url path="../../../adf/svc/errors/ServiceErrorMessage.java"/>
+      <url path="../../../adf/svc/types/AmountType.java"/>
+      <url path="../../../adf/svc/types/FloatResult.java"/>
+      <url path="../../../../../../oracle/summit/model/polymorphicvo/views/common/SEmpViewSDO.java"/>
+      <url path="types/CreateSEmpView1Response.java"/>
+      <url path="types/CreateSDeptView1Response.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MIME"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="AppModuleService_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="AppModuleServiceSoapHttpPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="http" host="127.0.0.1" port="7101" path="/SummitADF-Model-context-root/AppModuleService" query="WSDL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="AppModuleServiceSoapHttpPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="com.oracle.xmlns.apps.hr.service.AppModuleService"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="AppModuleServiceSoapHttpPort"/>
+            <hash n="OPERATIONS">
+               <hash n="createSDeptView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSEmpView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSDeptView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSEmpView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSDeptView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSEmpView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSEmpView1ByDept">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSDeptView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSEmpView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeSDeptView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeSEmpView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="processSDeptView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="processSEmpView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSDeptView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSEmpView1">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_POLICY">
+                  <value n="addressing"/>
+                  <hash n="GLOBAL_CONFIG_PROPERTIES"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <list n="wsconfig"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="127.0.0.1" port="7101" path="/SummitADF-Model-context-root/AppModuleService"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="AppModuleService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://xmlns.oracle.com/apps/hr/service/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../PolymorphicVO_WSClient.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST">
+         <url path="datagraph.xsd"/>
+         <url path="sdoXML.xsd"/>
+         <url path="BC4JService.xsd"/>
+         <url path="sdoJava.xsd"/>
+         <url path="sdoModel.xsd"/>
+         <url path="AppModuleService.xsd"/>
+         <url path="ServiceException.wsdl"/>
+         <url path="SDeptViewSDO.xsd"/>
+         <url path="SalespersonViewExSDO.xsd"/>
+         <url path="ServiceException.xsd"/>
+         <url path="SEmpViewSDO.xsd"/>
+      </list>
+      <url n="PROXY_WSDL_URL" path="AppModuleService.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://xmlns.oracle.com/apps/hr/service/}AppModuleService"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/hr/service/}AppModuleServiceSoapHttp"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO.getSDeptView1.int"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO.createSDeptView1.oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO.updateSDeptView1.oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="void.deleteSDeptView1.oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO.mergeSDeptView1.oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO>.findSDeptView1.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO>.processSDeptView1.java.lang.String.java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO>.com.oracle.xmlns.adf.svc.types.ProcessControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO.getSEmpView1.int"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO.createSEmpView1.oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO.updateSEmpView1.oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="void.deleteSEmpView1.oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO.mergeSEmpView1.oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO>.findSEmpView1.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO>.findSEmpView1ByDept.com.oracle.xmlns.adf.svc.types.FindCriteria.java.lang.String.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO>.processSEmpView1.java.lang.String.java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO>.com.oracle.xmlns.adf.svc.types.ProcessControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="53c2f7ea-014a-1000-8002-7f0000010293"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="AppModuleServiceSoapHttpPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://xmlns.oracle.com/apps/hr/service/}AppModuleServiceSoapHttp"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO.getSDeptView1.int"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO.createSDeptView1.oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO.updateSDeptView1.oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSDeptView1.oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO.mergeSDeptView1.oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO>.findSDeptView1.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO>.processSDeptView1.java.lang.String.java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SDeptViewSDO>.com.oracle.xmlns.adf.svc.types.ProcessControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO.getSEmpView1.int"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO.createSEmpView1.oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO.updateSEmpView1.oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSEmpView1.oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO.mergeSEmpView1.oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO>.findSEmpView1.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO>.findSEmpView1ByDept.com.oracle.xmlns.adf.svc.types.FindCriteria.java.lang.String.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO>.processSEmpView1.java.lang.String.java.util.List&lt;oracle.summit.model.polymorphicvo.views.common.SEmpViewSDO>.com.oracle.xmlns.adf.svc.types.ProcessControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="127.0.0.1" port="7101" path="/SummitADF-Model-context-root/AppModuleService"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/hr/service/}AppModuleService"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="com.oracle.xmlns.apps.hr.service.AppModuleServiceImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="com.oracle.xmlns.apps.hr.service.AppModuleService"/>
+               <value n="PT_TOP_DOWN_GENERATED_SEI_NAME" v="com.oracle.xmlns.apps.hr.service.AppModuleService"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../../PolymorphicVO_WSClient.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://xmlns.oracle.com/apps/hr/service/"/>
+         <value n="WS_URI" v="AppModuleService"/>
+         <url n="WS_WSDL_FILE" path="AppModuleService.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

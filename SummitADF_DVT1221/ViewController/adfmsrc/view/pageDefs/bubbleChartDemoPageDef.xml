@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.14.1" id="bubbleChartDemoPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SalesRepViewObj3" RangeSize="-1" DataControl="AppModuleDataControl" id="SalesRepViewObj3Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SalesRepViewObj3Iterator" id="SalesRepViewObj3" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.SalesRepViewObj" Name="SalesRepViewObj3">
+        <AttrNames>
+          <Item Value="CommissionPct"/>
+          <Item Value="Salary"/>
+          <Item Value="TotalSales"/>
+          <Item Value="LastName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

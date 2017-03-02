@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Summit Sample Application for ADF Desktop Integration" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/oracle/templates/tabletFirstTemplate.jspx" id="pt1">
+                <f:facet name="header">
+                    <af:panelGroupLayout id="pgl1" layout="horizontal" halign="center" valign="bottom"
+                                         inlineStyle="margin-left:4px;">
+                        <af:outputText value="Summit Sample Application for ADF Desktop Integration" id="ot1"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="status"/>
+                <f:facet name="appNav"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="footer"/>
+                <f:facet name="center">
+                    <af:panelBox text="#{bindings.name.inputValue}" id="pb1" showDisclosure="false"
+                                 inlineStyle="margin-left:10px;margin-bottom:10px;">
+                        <f:facet name="toolbar">
+                            <af:button text="Download Workbook" id="b1" destination="#{bindings.link.inputValue}"
+                                       disabled="false"
+                                       visible="#{bindings.link.inputValue != '/excel/EditWarehouseInventory.xlsx'}"/>
+                        </f:facet>
+                        <af:panelGridLayout id="pgl5">
+                            <af:gridRow marginTop="10px" height="auto" id="gr1">
+                                <af:gridCell width="100%" id="gc1">
+                                    <af:image id="i1" source="#{bindings.image.inputValue}" shortDesc="a screenshot of the excel workbook"
+                                              inlineStyle="height:250px; width:500px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="10px" height="auto" id="gr2">
+                                <af:gridCell width="100%" id="gc2">
+                                    <af:outputText value="#{bindings.description.inputValue}"
+                                                   shortDesc="#{bindings.description.hints.tooltip}" id="ot2"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </af:panelBox>
+                    <af:panelBox text="Warehouses" id="pb2" showDisclosure="false" inlineStyle="margin-left:10px;"
+                                 visible="#{bindings.link.inputValue == '/excel/EditWarehouseInventory.xlsx'}">
+                        <f:facet name="toolbar"/>
+                        <af:panelGroupLayout id="pgl2">
+                            <af:listView value="#{bindings.WarehouseMaster.collectionModel}" var="item"
+                                         emptyText="#{bindings.WarehouseMaster.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                         fetchSize="#{bindings.WarehouseMaster.rangeSize}" id="lv2">
+                                <af:listItem id="li2">
+                                    <af:panelGridLayout id="pgl3">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                            <af:gridCell marginStart="5px" rowSpan="3" width="10%" id="gc3">
+                                                <af:outputFormatted value="#{item.bindings.Id.inputValue}" id="of2">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.WarehouseMaster.hints.Id.format}"/>
+                                                </af:outputFormatted>
+                                            </af:gridCell>
+                                            <af:gridCell marginStart="5px" width="70%" id="gc4">
+                                                <af:outputFormatted value="#{item.bindings.Address.inputValue}"
+                                                                    id="of3"/>
+                                            </af:gridCell>
+                                            <af:gridCell marginStart="5px" rowSpan="3" width="20%" marginEnd="5px"
+                                                         id="gc5">
+                                                <af:button text="Download Workbook" id="b2"
+                                                           destination="/excel/EditWarehouseInventory.xlsx?WarehouseId=#{item.bindings.Id.inputValue}"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                            <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc6">
+                                                <af:outputFormatted value="#{item.bindings.City.inputValue}, #{item.bindings.Country.inputValue}"
+                                                                    id="of5"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:listItem>
+                            </af:listView>
+                        </af:panelGroupLayout>
+                    </af:panelBox>
+                </f:facet>
+                <f:facet name="start">
+                    <af:panelHeader text="Demo Workbooks" id="ph1">
+                        <f:facet name="context"/>
+                        <f:facet name="toolbar"/>
+                        <f:facet name="menuBar"/>
+                        <f:facet name="legend"/>
+                        <f:facet name="info"/>
+                        <af:listView value="#{bindings.samples.collectionModel}" var="item"
+                                     emptyText="#{bindings.samples.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                     fetchSize="#{bindings.samples.rangeSize}" id="lv1" selection="single"
+                                     selectedRowKeys="#{bindings.samples.collectionModel.selectedRow}"
+                                     selectionListener="#{bindings.samples.treeModel.makeCurrent}">
+                            <af:listItem id="li1">
+                                <af:panelGroupLayout layout="horizontal" id="pgl4">
+                                    <f:facet name="separator">
+                                        <af:spacer width="10" id="s1"/>
+                                    </f:facet>
+                                    <af:outputFormatted value="#{item.bindings.name.inputValue}" id="of1"/>
+                                </af:panelGroupLayout>
+                            </af:listItem>
+                        </af:listView>
+                    </af:panelHeader>
+                </f:facet>
+                <f:facet name="end"/>
+                <f:attribute name="endWidth" value="0px"/>
+                <f:attribute name="startWidth" value="220px"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

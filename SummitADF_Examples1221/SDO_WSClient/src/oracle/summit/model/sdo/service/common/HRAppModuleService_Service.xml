@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns1="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="/oracle/summit/model/sdo/service/common/" localpart="HRAppModuleService"/>
+      <port-info>
+         <wsdl-port namespaceURI="/oracle/summit/model/sdo/service/common/" localpart="HRAppModuleServiceSoapHttpPort"/>
+         <runtime/>
+         <operations>
+            <operation name="getDeptView1"/>
+            <operation name="createDeptView1"/>
+            <operation name="updateDeptView1"/>
+            <operation name="deleteDeptView1"/>
+            <operation name="mergeDeptView1"/>
+            <operation name="findDeptView1"/>
+            <operation name="processDeptView1"/>
+            <operation name="getEmpView1"/>
+            <operation name="createEmpView1"/>
+            <operation name="updateEmpView1"/>
+            <operation name="deleteEmpView1"/>
+            <operation name="mergeEmpView1"/>
+            <operation name="findEmpView1"/>
+            <operation name="findEmpView1ByDeptVC"/>
+            <operation name="processEmpView1"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

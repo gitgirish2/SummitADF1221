@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.2.62.49" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/treemapDemo.jsf" usageId="view_treemapDemoPageDef"/>
+    <page path="/sunburstDemo.jsf" usageId="view_sunburstDemoPageDef"/>
+    <page path="/timelineDemo.jsf" usageId="view_timelineDemoPageDef"/>
+    <page path="/hvDemo.jsf" usageId="view_hvDemoPageDef"/>
+    <page path="/hvSearchDemo.jsf" usageId="view_hvSearchDemoPageDef"/>
+    <page path="/gaugeDemo.jsf" usageId="view_gaugeDemoPageDef"/>
+    <page path="/gaugeInTableDemo.jsf" usageId="view_gaugeInTableDemoPageDef"/>
+    <page path="/pivotTableBarDemo.jsf" usageId="view_pivotTableBarDemoPageDef"/>
+    <page path="/hvPanelCardVODemo.jsf" usageId="view_hvPanelCardVODemoPageDef"/>
+    <page path="/thematicMapDemo.jsf" usageId="view_tMapPointDemoPageDef"/>
+    <page path="/projectGanttDemo.jsf" usageId="view_projectGanttDemoPageDef"/>
+    <page path="/RUGGanttDemo.jsf" usageId="view_RUGGanttDemoPageDef"/>
+    <page path="/schedGanttDemo.jsf" usageId="view_schedGanttDemoPageDef"/>
+    <page path="/scatterChartDemo.jsf" usageId="view_scatterChartDemoPageDef"/>
+    <page path="/comboChartDemo.jsf" usageId="view_comboChartDemoPageDef"/>
+    <page path="/bubbleChartDemo.jsf" usageId="view_bubbleChartDemoPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_treemapDemoPageDef" path="view.pageDefs.treemapDemoPageDef"/>
+    <page id="view_sunburstDemoPageDef" path="view.pageDefs.sunburstDemoPageDef"/>
+    <page id="view_timelineDemoPageDef" path="view.pageDefs.timelineDemoPageDef"/>
+    <page id="view_hvDemoPageDef" path="view.pageDefs.hvDemoPageDef"/>
+    <page id="view_hvSearchDemoPageDef" path="view.pageDefs.hvSearchDemoPageDef"/>
+    <page id="view_gaugeDemoPageDef" path="view.pageDefs.gaugeDemoPageDef"/>
+    <page id="view_gaugeInTableDemoPageDef" path="view.pageDefs.gaugeInTableDemoPageDef"/>
+    <page id="view_pivotTableBarDemoPageDef" path="view.pageDefs.pivotTableBarDemoPageDef"/>
+    <page id="view_hvPanelCardVODemoPageDef" path="view.pageDefs.hvPanelCardVODemoPageDef"/>
+    <page id="view_tMapPointDemoPageDef" path="view.pageDefs.tMapPointDemoPageDef"/>
+    <page id="view_projectGanttDemoPageDef" path="view.pageDefs.projectGanttDemoPageDef"/>
+    <page id="view_RUGGanttDemoPageDef" path="view.pageDefs.RUGGanttDemoPageDef"/>
+    <page id="view_schedGanttDemoPageDef" path="view.pageDefs.schedGanttDemoPageDef"/>
+    <page id="view_scatterChartDemoPageDef" path="view.pageDefs.scatterChartDemoPageDef"/>
+    <page id="view_comboChartDemoPageDef" path="view.pageDefs.comboChartDemoPageDef"/>
+    <page id="view_bubbleChartDemoPageDef" path="view.pageDefs.bubbleChartDemoPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

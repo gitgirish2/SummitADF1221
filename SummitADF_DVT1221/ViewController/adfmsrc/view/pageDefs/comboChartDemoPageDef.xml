@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.14.1" id="comboChartDemoPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SInventoryView1" RangeSize="-1" DataControl="AppModuleDataControl" id="SInventoryView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SInventoryView1Iterator" id="SInventoryView1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.SInventoryView" Name="SInventoryView1">
+        <AttrNames>
+          <Item Value="AmountInStock"/>
+          <Item Value="Name"/>
+          <Item Value="MaxInStock"/>
+          <Item Value="ReorderPoint"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

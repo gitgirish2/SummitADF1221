@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CreditRating"
+  Version="12.2.1.22.31"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="S_CREDIT_RATING"
+  AliasName="CreditRating"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Id"
+    IsNotNull="true"
+    Precision="7"
+    Scale="0"
+    ColumnName="ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="S_CREDIT_RATING"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CreditRating"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="CREDIT_RATING"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="S_CREDIT_RATING">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Customers"
+    Association="oracle.summitdi.model.entities.associations.CustomerCreditRatingAssoc"
+    AssociationEnd="oracle.summitdi.model.entities.associations.CustomerCreditRatingAssoc.Customers"
+    AssociationOtherEnd="oracle.summitdi.model.entities.associations.CustomerCreditRatingAssoc.CreditRating"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="SCreditRatingPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="S_CREDIT_RATING_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.summitdi.model.entities.CreditRating.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SCreditRatingUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="S_CREDIT_RATING_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.summitdi.model.entities.CreditRating.CreditRating"/>
+    </AttrArray>
+  </Key>
+</Entity>

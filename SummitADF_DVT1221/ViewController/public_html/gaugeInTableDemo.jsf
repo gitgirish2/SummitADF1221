@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <af:document title="gaugeInTableDemo.jsf" id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:table value="#{bindings.ProductInventoryView1.collectionModel}" var="row"
+                rows="#{bindings.ProductInventoryView1.rangeSize}"
+                emptyText="#{bindings.ProductInventoryView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                rowBandingInterval="0" fetchSize="#{bindings.ProductInventoryView1.rangeSize}" id="t1"
+                summary="Table Showing Product Inventory">
+        <af:column headerText="#{bindings.ProductInventoryView1.hints.ProductId.label}" id="c1" width="100"
+                   rowHeader="true">
+          <af:outputText value="#{row.ProductId}" shortDesc="#{bindings.ProductInventoryView1.hints.ProductId.tooltip}"
+                         id="ot1">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.ProductInventoryView1.hints.ProductId.format}"/>
+          </af:outputText>
+        </af:column>
+        <af:column headerText="#{bindings.ProductInventoryView1.hints.Name.label}" id="c2" width="100">
+          <af:outputText value="#{row.Name}" shortDesc="#{bindings.ProductInventoryView1.hints.Name.tooltip}" id="ot2"/>
+        </af:column>
+        <af:column headerText="#{bindings.ProductInventoryView1.hints.ShortDesc.label}" id="c3" width="100">
+          <af:outputText value="#{row.ShortDesc}" shortDesc="#{bindings.ProductInventoryView1.hints.ShortDesc.tooltip}"
+                         id="ot3"/>
+        </af:column>
+        <af:column headerText="#{bindings.ProductInventoryView1.hints.AmountInStock.label}" id="c4" width="72"
+                   align="center">
+          <dvt:ledGauge id="ledGauge1" value="#{row.bindings.AmountInStock.inputValue}"
+                        shortDesc="#{bindings.ProductInventoryView1.hints.AmountInStock.tooltip}" maximum="3000">
+            <dvt:gaugeMetricLabel rendered="true" scaling="none" id="gml1"/>
+            <dvt:gaugeThreshold id="gt1" maximum="#{row.bindings.ReorderPoint.inputValue}" color="#d62800"/>
+            <dvt:gaugeThreshold id="gt2" maximum="#{row.bindings.MaxInStock.inputValue}" color="#63a500"/>
+            <dvt:gaugeThreshold id="gt3" color="#e7e700"/>
+          </dvt:ledGauge>
+        </af:column>
+        <af:column headerText="#{bindings.ProductInventoryView1.hints.ReorderPoint.label}" id="c5" width="128">
+          <af:outputText value="#{row.ReorderPoint}"
+                         shortDesc="#{bindings.ProductInventoryView1.hints.ReorderPoint.tooltip}" id="ot4">
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.ProductInventoryView1.hints.ReorderPoint.format}"/>
+          </af:outputText>
+        </af:column>
+        <af:column headerText="#{bindings.ProductInventoryView1.hints.MaxInStock.label}" id="c6" width="100">
+          <af:outputText value="#{row.MaxInStock}"
+                         shortDesc="#{bindings.ProductInventoryView1.hints.MaxInStock.tooltip}" id="ot5">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.ProductInventoryView1.hints.MaxInStock.format}"/>
+          </af:outputText>
+        </af:column>
+        <af:column headerText="#{bindings.ProductInventoryView1.hints.WarehouseId.label}" id="c9" width="100">
+          <af:outputText value="#{row.WarehouseId}"
+                         shortDesc="#{bindings.ProductInventoryView1.hints.WarehouseId.tooltip}" id="ot8">
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.ProductInventoryView1.hints.WarehouseId.format}"/>
+          </af:outputText>
+        </af:column>
+      </af:table>
+    </af:form>
+  </af:document>
+</f:view>

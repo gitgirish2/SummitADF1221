@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="/oracle/summit/model/polymorphicvo/views/common/" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:sdo="commonj.sdo" xmlns:sdoJava="commonj.sdo/java" xmlns:sdoXML="commonj.sdo/xml" xmlns="/oracle/summit/model/polymorphicvo/views/common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+  <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+  <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+  <xsd:import namespace="commonj.sdo" schemaLocation="sdoModel.xsd"/>
+  <xsd:complexType name="SEmpViewSDO">
+    <xsd:annotation>
+      <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+        <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+          <attribute>Id</attribute>
+        </key>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Id" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="LastName" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="FirstName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Userid" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Email" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="StartDate" nillable="true" type="ns0:date-Date"/>
+      <xsd:element minOccurs="0" name="Comments" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ManagerId" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="TitleId" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="DeptId" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="Salary" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="Title" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="TitleId1" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="Name" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Id1" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="SEmpView" type="SEmpViewSDO" sdoXML:dataType="sdo:DataObject"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="sEmpViewSDO" type="SEmpViewSDO"/>
+</xsd:schema>

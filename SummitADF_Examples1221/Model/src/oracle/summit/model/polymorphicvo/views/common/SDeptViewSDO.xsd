@@ -1,0 +1,25 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sdoXML="commonj.sdo/xml"
+     xmlns:sdo="commonj.sdo" targetNamespace="/oracle/summit/model/polymorphicvo/views/common/"
+     xmlns="/oracle/summit/model/polymorphicvo/views/common/" elementFormDefault="qualified"
+     sdoJava:package="oracle.summit.model.polymorphicvo.views.common">
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoXML.xsd" namespace="commonj.sdo/xml"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoModel.xsd" namespace="commonj.sdo"/>
+    <xsd:include schemaLocation="SEmpViewSDO.xsd"/>
+    <xsd:complexType name="SDeptViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Id</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Id" type="xsd:int" minOccurs="0" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="RegionId" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="SEmpView" type="SEmpViewSDO" minOccurs="0" maxOccurs="unbounded" sdoXML:dataType="sdo:DataObject"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="sDeptViewSDO" type="SDeptViewSDO"/>
+</xsd:schema>

@@ -1,0 +1,21 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="/oracle/summit/model/polymorphicvo/views/common/"
+     xmlns="/oracle/summit/model/polymorphicvo/views/common/" elementFormDefault="qualified">
+    <xsd:include schemaLocation="SEmpViewSDO.xsd"/>
+    <xsd:complexType name="SalespersonViewExSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Id</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="SEmpViewSDO">
+                <xsd:sequence>
+                    <xsd:element name="CommissionPct" type="xsd:decimal" minOccurs="0" nillable="true"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="salespersonViewExSDO" type="SalespersonViewExSDO"/>
+</xsd:schema>

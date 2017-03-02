@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="scatterChartDemo.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <dvt:scatterChart id="scatterChart1" var="row" value="#{bindings.SalesRepViewObj3.collectionModel}">
+                <dvt:chartLegend rendered="true" id="cl1">
+                    <dvt:legendSection source="ag3" id="ls1"/>
+                </dvt:chartLegend>
+                <f:facet name="dataStamp">
+                    <dvt:chartDataItem id="di1" group="#{row.LastName}" x="#{row.CommissionPct}" y="#{row.Salary}">
+                        <dvt:attributeGroups id="ag3" value="#{row.LastName}" type="color shape"/>
+                    </dvt:chartDataItem>
+                </f:facet>
+            </dvt:scatterChart>
+        </af:form>
+    </af:document>
+</f:view>

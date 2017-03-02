@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<AppModule
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="EmpService"
+   Version="12.1.3.2.36"
+   InheritPersonalization="merge"
+   ComponentClass="oracle.summit.base.SummitApplicationModuleImpl"
+   ClearCacheOnRollback="true">
+   <DesignTime>
+      <Attr Name="_deployType" Value="4096"/>
+   </DesignTime>
+   <ViewUsage
+      Name="EmpView1"
+      ViewObjectName="oracle.summit.model.rowfinder.EmpView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="TitleView1"
+      ViewObjectName="oracle.summit.model.rowfinder.TitleView" >
+   </ViewUsage>
+   <Remote
+      Name="ServiceInterface"
+      ServerClassName="oracle.summit.model.rowfinder.server.serviceinterface.EmpServiceServiceImpl"
+      ServerInterfaceName="oracle.summit.model.rowfinder.common.serviceinterface.EmpServiceService">
+      <DesignTime>
+         <Attr Name="_webServiceName" Value="EmpServiceService"/>
+         <Attr Name="_targetNameSpace" Value="/oracle/summit/model/rowfinder/common/"/>
+      </DesignTime>
+   </Remote>
+   <ServiceViewUsage
+      ViewUsageName="EmpView1"
+      CanCreate="true"
+      CanUpdate="true"
+      CanDelete="true">
+      <DesignTime>
+         <Attr Name="_DeleteOpName" Value="deleteEmpView1"/>
+         <Attr Name="_UpdateOpName" Value="updateEmpView1"/>
+         <Attr Name="_CreateOpName" Value="createEmpView1"/>
+      </DesignTime>
+   </ServiceViewUsage>
+</AppModule>

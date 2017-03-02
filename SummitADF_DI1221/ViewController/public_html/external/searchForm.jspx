@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Customer Search Form" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelHeader text="Search Customer By Country" id="ph1">
+                    <f:facet name="context"/>
+                    <f:facet name="menuBar"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="legend"/>
+                    <f:facet name="info"/>
+                    <af:panelFormLayout id="pfl1">
+                        <af:inputText value="#{bindings.searchTerm.inputValue}" label="#{bindings.Country.label}"
+                                      required="#{bindings.searchTerm.hints.mandatory}"
+                                      columns="#{bindings.searchTerm.hints.displayWidth}"
+                                      maximumLength="#{bindings.searchTerm.hints.precision}"
+                                      shortDesc="#{bindings.searchTerm.hints.tooltip}" id="it1">
+                            <f:validator binding="#{bindings.searchTerm.validator}"/>
+                        </af:inputText>
+                        <af:spacer width="10" height="10" id="s1"/>
+                        <af:panelGroupLayout id="pg1" layout="horizontal">
+                            <af:button actionListener="#{bindings.executeCountriesQuery.execute}" id="cb1" text="Search"
+                                       partialSubmit="false">
+                                <af:setActionListener from="search" to="#{requestScope.searchAction}"/>
+                            </af:button>
+                            <af:button text="Cancel" id="cb2" partialSubmit="false">
+                                <af:setActionListener from="cancel" to="#{requestScope.searchAction}"/>
+                            </af:button>
+                        </af:panelGroupLayout>
+                    </af:panelFormLayout>
+                </af:panelHeader>
+                <?audit suppress oracle.adf.faces.verbatimUsage?>
+                <f:verbatim rendered="#{requestScope.searchAction eq 'search'}">
+                    <!-- Note the continue tag must be exactly like this - no whitespace-->
+                    <span id="ADFdi_CloseWindow">Continue</span>
+                </f:verbatim>
+                <f:verbatim rendered="#{requestScope.searchAction eq 'cancel'}">
+                    <!-- Note the Abort tag must be exactly like this - no whitespace-->
+                    <span id="ADFdi_CloseWindow">Abort</span>
+                </f:verbatim>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.65.79" id="MainPagePageDef"
+                Package="oracle.summitdi.view.pageDefs">
+    <parameters/>
+    <executables>
+        <variableIterator id="variables"/>
+        <iterator Binds="root" RangeSize="25" DataControl="SamplesList" id="SamplesListIterator"/>
+        <accessorIterator MasterBinding="SamplesListIterator" Binds="samples" RangeSize="25" DataControl="SamplesList"
+                          BeanClass="oracle.summit.pojo.Sample" id="samplesIterator"/>
+        <iterator Binds="WarehouseMaster" RangeSize="25" DataControl="SummitAppModuleDataControl"
+                  id="WarehouseMasterIterator"/>
+    </executables>
+    <bindings>
+        <tree IterBinding="samplesIterator" id="samples">
+            <nodeDefinition DefName="oracle.summit.pojo.Sample" Name="samples0">
+                <AttrNames>
+                    <Item Value="name"/>
+                </AttrNames>
+            </nodeDefinition>
+        </tree>
+        <attributeValues IterBinding="samplesIterator" id="description">
+            <AttrNames>
+                <Item Value="description"/>
+            </AttrNames>
+        </attributeValues>
+        <attributeValues IterBinding="samplesIterator" id="image">
+            <AttrNames>
+                <Item Value="image"/>
+            </AttrNames>
+        </attributeValues>
+        <attributeValues IterBinding="samplesIterator" id="name">
+            <AttrNames>
+                <Item Value="name"/>
+            </AttrNames>
+        </attributeValues>
+        <attributeValues IterBinding="samplesIterator" id="link">
+            <AttrNames>
+                <Item Value="link"/>
+            </AttrNames>
+        </attributeValues>
+        <tree IterBinding="WarehouseMasterIterator" id="WarehouseMaster">
+            <nodeDefinition DefName="oracle.summitdi.model.queries.WarehouseView" Name="WarehouseMaster0">
+                <AttrNames>
+                    <Item Value="Id"/>
+                    <Item Value="Address"/>
+                    <Item Value="City"/>
+                    <Item Value="Country"/>
+                    <Item Value="State"/>
+                </AttrNames>
+            </nodeDefinition>
+        </tree>
+    </bindings>
+</pageDefinition>

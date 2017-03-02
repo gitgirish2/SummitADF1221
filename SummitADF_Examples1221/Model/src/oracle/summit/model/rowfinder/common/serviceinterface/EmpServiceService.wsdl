@@ -1,0 +1,99 @@
+<wsdl:definitions
+     name="EmpServiceService"
+     targetNamespace="/oracle/summit/model/rowfinder/common/"
+     xmlns:tns="/oracle/summit/model/rowfinder/common/"
+     xmlns:types="/oracle/summit/model/rowfinder/common/types/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="classpath:/META-INF/wsdl/ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="/oracle/summit/model/rowfinder/common/types/" schemaLocation="EmpServiceService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="EmpServiceService_createEmpView1">
+        <wsdl:part name="parameters" element="types:createEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="EmpServiceService_createEmpView1Response">
+        <wsdl:part name="parameters" element="types:createEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="EmpServiceService_updateEmpView1">
+        <wsdl:part name="parameters" element="types:updateEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="EmpServiceService_updateEmpView1Response">
+        <wsdl:part name="parameters" element="types:updateEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:message name="EmpServiceService_deleteEmpView1">
+        <wsdl:part name="parameters" element="types:deleteEmpView1"/>
+    </wsdl:message>
+    <wsdl:message name="EmpServiceService_deleteEmpView1Response">
+        <wsdl:part name="parameters" element="types:deleteEmpView1Response"/>
+    </wsdl:message>
+    <wsdl:portType name="EmpServiceService">
+        <wsdl:documentation>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="EmpView1" SDOName="tns:EmpViewSDO"
+                 CreateOpName="createEmpView1" UpdateOpName="updateEmpView1" DeleteOpName="deleteEmpView1"/>
+        </wsdl:documentation>
+        <wsdl:operation name="createEmpView1">
+            <wsdl:input message="tns:EmpServiceService_createEmpView1"/>
+            <wsdl:output message="tns:EmpServiceService_createEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateEmpView1">
+            <wsdl:input message="tns:EmpServiceService_updateEmpView1"/>
+            <wsdl:output message="tns:EmpServiceService_updateEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteEmpView1">
+            <wsdl:input message="tns:EmpServiceService_deleteEmpView1"/>
+            <wsdl:output message="tns:EmpServiceService_deleteEmpView1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="EmpServiceServiceSoapHttp" type="tns:EmpServiceService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="createEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/rowfinder/common/createEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/rowfinder/common/updateEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteEmpView1">
+            <soap:operation soapAction="/oracle/summit/model/rowfinder/common/deleteEmpView1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="EmpServiceService">
+        <wsdl:port name="EmpServiceServiceSoapHttpPort" binding="tns:EmpServiceServiceSoapHttp">
+            <soap:address location="http://localhost:7101/SummitADF-Model-context-root/EmpServiceService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

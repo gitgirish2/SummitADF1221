@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="WarehouseManagerIdFkAssoc"
+  Version="12.2.1.18.31"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Employees"
+    Cardinality="1"
+    Source="true"
+    Owner="oracle.summitdi.model.entities.Employees">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Employees"/>
+      <Attr Name="_foreignKey" Value="oracle.summitdi.model.entities.Employees.SEmpIdPk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.summitdi.model.entities.Employees.Id"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Warehouse"
+    Cardinality="-1"
+    Owner="oracle.summitdi.model.entities.Warehouse">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Warehouse"/>
+      <Attr Name="_foreignKey" Value="oracle.summitdi.model.entities.Warehouse.SWarehouseManagerIdFk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.summitdi.model.entities.Warehouse.ManagerId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

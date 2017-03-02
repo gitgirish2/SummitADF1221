@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<AppModule
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="HRAppModule"
+   Version="12.1.3.2.36"
+   InheritPersonalization="merge"
+   ComponentClass="oracle.summit.base.SummitApplicationModuleImpl"
+   ClearCacheOnRollback="true">
+   <DesignTime>
+      <Attr Name="_deployType" Value="4096"/>
+   </DesignTime>
+   <ViewUsage
+      Name="DeptView1"
+      ViewObjectName="oracle.summit.model.sdo.views.DeptView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="EmpView1"
+      ViewObjectName="oracle.summit.model.sdo.views.EmpView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="EmpView2"
+      ViewObjectName="oracle.summit.model.sdo.views.EmpView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="EmpView3"
+      ViewObjectName="oracle.summit.model.sdo.views.EmpView" >
+   </ViewUsage>
+   <ViewLinkUsage
+      Name="SEmpManagerIdFkLink1"
+      ViewLinkObjectName="oracle.summit.model.sdo.views.SEmpManagerIdFkLink"
+      SrcViewUsageName="oracle.summit.model.sdo.service.HRAppModule.EmpView1"
+      DstViewUsageName="oracle.summit.model.sdo.service.HRAppModule.EmpView2"
+      Reversed="false">
+   </ViewLinkUsage>
+   <ViewLinkUsage
+      Name="SEmpDeptIdFkLink1"
+      ViewLinkObjectName="oracle.summit.model.sdo.views.SEmpDeptIdFkLink"
+      SrcViewUsageName="oracle.summit.model.sdo.service.HRAppModule.DeptView1"
+      DstViewUsageName="oracle.summit.model.sdo.service.HRAppModule.EmpView3"
+      Reversed="false">
+   </ViewLinkUsage>
+   <Remote
+      Name="ServiceInterface"
+      ServerClassName="oracle.summit.model.sdo.service.server.serviceinterface.HRAppModuleServiceImpl"
+      ServerInterfaceName="oracle.summit.model.sdo.service.common.serviceinterface.HRAppModuleService">
+      <DesignTime>
+         <Attr Name="_webServiceName" Value="HRAppModuleService"/>
+         <Attr Name="_targetNameSpace" Value="/oracle/summit/model/sdo/service/common/"/>
+      </DesignTime>
+   </Remote>
+   <ServiceViewUsage
+      ViewUsageName="DeptView1"
+      CanCreate="true"
+      CanUpdate="true"
+      CanDelete="true"
+      CanMerge="true">
+      <DesignTime>
+         <Attr Name="_DeleteOpName" Value="deleteDeptView1"/>
+         <Attr Name="_GetOpName" Value="getDeptView1"/>
+         <Attr Name="_MergeOpName" Value="mergeDeptView1"/>
+         <Attr Name="_FindOpName" Value="findDeptView1"/>
+         <Attr Name="_UpdateOpName" Value="updateDeptView1"/>
+         <Attr Name="_ProcessOpName" Value="processDeptView1"/>
+         <Attr Name="_CreateOpName" Value="createDeptView1"/>
+      </DesignTime>
+   </ServiceViewUsage>
+   <ServiceViewUsage
+      ViewUsageName="EmpView1"
+      CanCreate="true"
+      CanUpdate="true"
+      CanDelete="true"
+      CanMerge="true">
+      <DesignTime>
+         <Attr Name="_DeleteOpName" Value="deleteEmpView1"/>
+         <AttrArray Name="_VCFindOps">
+            <Item Value="ByDeptVC"/>
+         </AttrArray>
+         <Attr Name="_GetOpName" Value="getEmpView1"/>
+         <Attr Name="_MergeOpName" Value="mergeEmpView1"/>
+         <AttrArray Name="__ByDeptVC">
+            <Item Value="findEmpView1ByDeptVC"/>
+            <Item Value="bv_dName"/>
+         </AttrArray>
+         <Attr Name="_FindOpName" Value="findEmpView1"/>
+         <Attr Name="_UpdateOpName" Value="updateEmpView1"/>
+         <Attr Name="_ProcessOpName" Value="processEmpView1"/>
+         <Attr Name="_CreateOpName" Value="createEmpView1"/>
+      </DesignTime>
+   </ServiceViewUsage>
+</AppModule>

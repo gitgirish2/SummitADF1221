@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="/oracle/summit/model/sdo/views/common/" xmlns:sdoJava="commonj.sdo/java" sdoJava:package="oracle.summit.model.sdo.views.common" xmlns:sdoXML="commonj.sdo/xml" xmlns="/oracle/summit/model/sdo/views/common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+  <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+  <xsd:include schemaLocation="EmpViewSDO.xsd"/>
+  <xsd:complexType name="DeptViewSDO">
+    <xsd:annotation>
+      <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+        <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+          <attribute>Id</attribute>
+        </key>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Id" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="Name" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="RegionId" nillable="true" type="xsd:int"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmpView" type="EmpViewSDO"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="deptViewSDO" type="DeptViewSDO"/>
+</xsd:schema>

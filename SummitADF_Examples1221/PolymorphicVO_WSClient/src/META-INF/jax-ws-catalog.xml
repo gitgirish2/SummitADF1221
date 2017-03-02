@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://127.0.0.1:7101/SummitADF-Model-context-root/AppModuleService?WSDL#%7Bhttp%3A%2F%2Fxmlns.oracle.com%2Fapps%2Fhr%2Fservice%2F%7DAppModuleService"
+          uri="../com/oracle/xmlns/apps/hr/service/AppModuleService.wsdl"/>
+</catalog>

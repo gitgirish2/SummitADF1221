@@ -1,0 +1,32 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:sdoXML="commonj.sdo/xml" targetNamespace="/oracle/summit/model/rowfinder/common/"
+     xmlns="/oracle/summit/model/rowfinder/common/" elementFormDefault="qualified" sdoJava:package="oracle.summit.model.rowfinder.common">
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoXML.xsd" namespace="commonj.sdo/xml"/>
+    <xsd:complexType name="EmpViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Id</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Id" type="xsd:int" minOccurs="0" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element name="LastName" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="FirstName" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Userid" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Email" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="StartDate" type="ns0:date-Date" minOccurs="0" nillable="true"/>
+            <xsd:element name="Comments" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="ManagerId" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="TitleId" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="DeptId" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="Salary" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="CommissionPct" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="TrTitleId" type="xsd:long" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="empViewSDO" type="EmpViewSDO"/>
+</xsd:schema>

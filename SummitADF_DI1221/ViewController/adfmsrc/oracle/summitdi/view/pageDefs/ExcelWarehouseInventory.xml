@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.31" id="ExcelWarehouseInventory"
+                Package="oracle.summitdi.view.pageDefs">
+    <parameters>
+        <parameter id="WarehouseIdParam" value="value"/>
+    </parameters>
+    <executables>
+        <variableIterator id="variables"/>
+        <iterator Binds="WarehouseMaster" RangeSize="25" DataControl="SummitAppModuleDataControl"
+                  id="WarehouseMasterIterator"/>
+        <iterator Binds="InventoryDetail" RangeSize="25" DataControl="SummitAppModuleDataControl"
+                  id="InventoryDetailIterator"/>
+    </executables>
+    <bindings>
+        <attributeValues IterBinding="WarehouseMasterIterator" id="Id">
+            <AttrNames>
+                <Item Value="Id"/>
+            </AttrNames>
+        </attributeValues>
+        <attributeValues IterBinding="WarehouseMasterIterator" id="Address">
+            <AttrNames>
+                <Item Value="Address"/>
+            </AttrNames>
+        </attributeValues>
+        <attributeValues IterBinding="WarehouseMasterIterator" id="City">
+            <AttrNames>
+                <Item Value="City"/>
+            </AttrNames>
+        </attributeValues>
+        <attributeValues IterBinding="WarehouseMasterIterator" id="State">
+            <AttrNames>
+                <Item Value="State"/>
+            </AttrNames>
+        </attributeValues>
+        <list IterBinding="WarehouseMasterIterator" StaticList="false" Uses="CountriesLOV" id="CountryId"
+              DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+        <attributeValues IterBinding="WarehouseMasterIterator" id="ZipCode">
+            <AttrNames>
+                <Item Value="ZipCode"/>
+            </AttrNames>
+        </attributeValues>
+        <attributeValues IterBinding="WarehouseMasterIterator" id="Phone">
+            <AttrNames>
+                <Item Value="Phone"/>
+            </AttrNames>
+        </attributeValues>
+        <list IterBinding="WarehouseMasterIterator" StaticList="false" Uses="ManagersLOV" id="ManagerId"
+              DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+        <attributeValues IterBinding="WarehouseMasterIterator" id="Country">
+            <AttrNames>
+                <Item Value="Country"/>
+            </AttrNames>
+        </attributeValues>
+        <list IterBinding="WarehouseMasterIterator" StaticList="false" Uses="RegionIdLOV" id="RegionId"
+              DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+        <tree IterBinding="InventoryDetailIterator" id="InventoryDetail">
+            <nodeDefinition DefName="oracle.summitdi.model.queries.InventoryView" Name="InventoryDetail0">
+                <AttrNames>
+                    <Item Value="ProductId"/>
+                    <Item Value="WarehouseId"/>
+                    <Item Value="AmountInStock"/>
+                    <Item Value="ReorderPoint"/>
+                    <Item Value="MaxInStock"/>
+                    <Item Value="OutOfStockExplanation"/>
+                    <Item Value="RestockDate"/>
+                </AttrNames>
+            </nodeDefinition>
+        </tree>
+        <action id="Commit" DataControl="SummitAppModuleDataControl" RequiresUpdateModel="true"
+                Action="commitTransaction"/>
+        <action IterBinding="InventoryDetailIterator" id="Execute"
+                InstanceName="SummitAppModuleDataControl.InventoryDetail" DataControl="SummitAppModuleDataControl"
+                RequiresUpdateModel="true" Action="iteratorExecute"/>
+        <methodAction id="FilterWarehouseMasterById" RequiresUpdateModel="true" Action="invokeMethod"
+                      MethodName="FilterWarehouseMasterById" IsViewObjectMethod="false"
+                      DataControl="SummitAppModuleDataControl"
+                      InstanceName="data.SummitAppModuleDataControl.dataProvider">
+            <NamedData NDName="warehouseId" NDValue="${bindings.WarehouseIdParam}"
+                       NDType="java.lang.String"/>
+        </methodAction>
+    </bindings>
+</pageDefinition>

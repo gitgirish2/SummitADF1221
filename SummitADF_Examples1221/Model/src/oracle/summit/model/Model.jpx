@@ -1,0 +1,405 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<JboProject
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="Model"
+   Version="12.2.1.0.31"
+   SeparateXMLFiles="true"
+   PackageName="oracle.summit.model" >
+   <DesignTime>
+      <Attr Name="_appModuleNames21" Value="oracle.summit.model.validation.AppModule" />
+      <Attr Name="_appModuleNames20" Value="oracle.summit.model.sdo.service.HRAppModule" />
+      <Attr Name="_appModuleNames22" Value="oracle.summit.model.rowfinder.EmpService" />
+      <Attr Name="_domainNames0" Value="oracle.summit.model.domains.EvenNumber" />
+      <Attr Name="_domainNames2" Value="oracle.summit.model.domains.PointType" />
+      <Attr Name="_domainNames1" Value="oracle.summit.model.domains.ShortEmailAddress" />
+      <Attr Name="_jprName" Value="../../../../Model.jpr" />
+      <Attr Name="_appModuleNames17" Value="oracle.summit.model.viewobjects.AppModule" />
+      <Attr Name="_appModuleNames18" Value="oracle.summit.model.wrapplsql.AppModule" />
+      <Attr Name="_appModuleNames19" Value="oracle.summit.model.polymorphicvo.service.AppModule" />
+      <Attr Name="_appModuleNames12" Value="oracle.summit.model.polymorphic.service.PolymorphicAppModule" />
+      <Attr Name="_appModuleNames11" Value="oracle.summit.model.multinamedviewcriteria.AppModule" />
+      <Attr Name="_appModuleNames10" Value="oracle.summit.model.multieoupdate.AppModule" />
+      <Attr Name="_appModuleNames16" Value="oracle.summit.model.viewobjectonrefcursor.AppModule" />
+      <Attr Name="_appModuleNames15" Value="oracle.summit.model.services.CustomerSelfServiceAppModule" />
+      <Attr Name="_appModuleNames14" Value="oracle.summit.model.services.BackOfficeAppModule" />
+      <Attr Name="_appModuleNames13" Value="oracle.summit.model.readandwritexml.queries.AppModule" />
+      <Attr Name="_NamedConnection" Value="summit_adf" />
+      <Attr Name="_appModuleNames7" Value="oracle.summit.model.extend.AppModule" />
+      <Attr Name="_appModuleNames6" Value="oracle.summit.model.domains.AppModule" />
+      <Attr Name="_appModuleNames9" Value="oracle.summit.model.invokingstoredprocedure.InvokingStoredProcAppModule" />
+      <Attr Name="_appModuleNames8" Value="oracle.summit.model.inMemoryOperations.AppModule" />
+      <Attr Name="_appModuleNames3" Value="oracle.summit.model.controlpostorder.AppModule" />
+      <Attr Name="_appModuleNames2" Value="oracle.summit.model.buslogic.AppModule" />
+      <Attr Name="_appModuleNames5" Value="oracle.summit.model.declblock.AppModule" />
+      <Attr Name="_appModuleNames4" Value="oracle.summit.model.custommessages.AppModule" />
+      <Attr Name="_appModuleNames1" Value="oracle.summit.model.appmodule.service.AppModule" />
+      <Attr Name="_appModuleNames0" Value="oracle.summit.model.amservice.ServiceAppModule" />
+      <Attr Name="_jbo.TypeMapEntries" Value="Java" />
+      <Attr Name="_appModuleNames23" Value="oracle.summit.model.rest_ws.AppModule"/>
+   </DesignTime>
+   <Containee
+      Name="amservice"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.amservice" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="appmodule"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.appmodule" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="service"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.appmodule.service" >
+      <DesignTime>
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="buslogic"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.buslogic" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="views"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.buslogic.views" >
+      <DesignTime>
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="controlpostorder"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.controlpostorder" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="custommessages"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.custommessages" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="declblock"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.declblock" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="domains"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.domains" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_DO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="assoc"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.entities.assoc" >
+      <DesignTime>
+         <Attr Name="_AS" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="entities"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.entities" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="extend"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.extend" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="inMemoryOperations"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.inMemoryOperations" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="invokingstoredprocedure"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.invokingstoredprocedure" >
+      <DesignTime>
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="model"
+      PackageName="oracle.summit.model"
+      ObjectType="JboPackage">
+      <DesignTime>
+         <Attr Name="_EO" Value="true"/>
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="multieoupdate"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.multieoupdate" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="multinamedviewcriteria"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.multinamedviewcriteria" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="entities"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.polymorphic.entities" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="service"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.polymorphic.service" >
+      <DesignTime>
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="views"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.polymorphic.views" >
+      <DesignTime>
+         <Attr Name="_VO" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="entities"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.polymorphicvo.entities" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="service"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.polymorphicvo.service" >
+      <DesignTime>
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="views"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.polymorphicvo.views" >
+      <DesignTime>
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="entities"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.readandwritexml.entities" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="queries"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.readandwritexml.queries" >
+      <DesignTime>
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="rest_ws"
+      PackageName="oracle.summit.model.rest_ws"
+      ObjectType="JboPackage">
+      <DesignTime>
+         <Attr Name="_EO" Value="true"/>
+         <Attr Name="_VO" Value="true"/>
+         <Attr Name="_AM" Value="true"/>
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="rowfinder"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.rowfinder" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="entities"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.sdo.entities" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="service"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.sdo.service" >
+      <DesignTime>
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="views"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.sdo.views" >
+      <DesignTime>
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="services"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.services" >
+      <DesignTime>
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="validation"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.validation" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="viewobjectonrefcursor"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.viewobjectonrefcursor" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="viewobjects"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.viewobjects" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_AS" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="links"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.views.links" >
+      <DesignTime>
+         <Attr Name="_VL" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="readonly"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.views.readonly" >
+      <DesignTime>
+         <Attr Name="_VO" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="views"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.views" >
+      <DesignTime>
+         <Attr Name="_VO" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="wrapplsql"
+      ObjectType="JboPackage"
+      PackageName="oracle.summit.model.wrapplsql" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+         <Attr Name="_VO" Value="true" />
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <AttrArray Name="MessageBundles">
+      <Item Value="oracle.summit.model.custommessages.CustomMessageBundle" />
+   </AttrArray>
+</JboProject>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="AppModule"
+   Version="12.1.3.2.36"
+   InheritPersonalization="merge"
+   ComponentClass="oracle.summit.base.SummitApplicationModuleImpl" >
+   <ViewUsage
+      Name="ItemsView1"
+      ViewObjectName="oracle.summit.model.validation.ItemsView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="OrdersView1"
+      ViewObjectName="oracle.summit.model.validation.OrdersView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ItemsView2"
+      ViewObjectName="oracle.summit.model.validation.ItemsView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ProductsView1"
+      ViewObjectName="oracle.summit.model.validation.ProductsView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ItemsView3"
+      ViewObjectName="oracle.summit.model.validation.ItemsView" >
+   </ViewUsage>
+   <ViewLinkUsage
+      Name="SItemOrdIdFkLink1"
+      ViewLinkObjectName="oracle.summit.model.validation.SItemOrdIdFkLink"
+      SrcViewUsageName="oracle.summit.model.validation.AppModule.OrdersView1"
+      DstViewUsageName="oracle.summit.model.validation.AppModule.ItemsView2" >
+   </ViewLinkUsage>
+   <ViewLinkUsage
+      Name="SItemProductIdFkLink1"
+      ViewLinkObjectName="oracle.summit.model.validation.SItemProductIdFkLink"
+      SrcViewUsageName="oracle.summit.model.validation.AppModule.ProductsView1"
+      DstViewUsageName="oracle.summit.model.validation.AppModule.ItemsView3" >
+   </ViewLinkUsage>
+</AppModule>

@@ -1,0 +1,222 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/hr/service/types/"
+     xmlns:tns="http://xmlns.oracle.com/apps/hr/service/types/" xmlns:ns0="/oracle/summit/model/polymorphicvo/views/common/"
+     xmlns:ns1="http://xmlns.oracle.com/adf/svc/types/">
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd"/>
+    <import namespace="/oracle/summit/model/polymorphicvo/views/common/" schemaLocation="../../../views/common/SalespersonViewExSDO.xsd"/>
+    <import namespace="/oracle/summit/model/polymorphicvo/views/common/" schemaLocation="../../../views/common/SDeptViewSDO.xsd"/>
+    <import namespace="/oracle/summit/model/polymorphicvo/views/common/" schemaLocation="../../../views/common/SEmpViewSDO.xsd"/>
+    <element name="getSDeptView1">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSDeptView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SDeptViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSDeptView1">
+        <complexType>
+            <sequence>
+                <element name="sDeptView1" type="ns0:SDeptViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSDeptView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SDeptViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSDeptView1">
+        <complexType>
+            <sequence>
+                <element name="sDeptView1" type="ns0:SDeptViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSDeptView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SDeptViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSDeptView1">
+        <complexType>
+            <sequence>
+                <element name="sDeptView1" type="ns0:SDeptViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSDeptView1Response">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="mergeSDeptView1">
+        <complexType>
+            <sequence>
+                <element name="sDeptView1" type="ns0:SDeptViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="mergeSDeptView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SDeptViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSDeptView1">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns1:FindCriteria"/>
+                <element name="findControl" type="ns1:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSDeptView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SDeptViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processSDeptView1">
+        <complexType>
+            <sequence>
+                <element name="changeOperation" type="string"/>
+                <element name="sDeptView1" type="ns0:SDeptViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="processControl" type="ns1:ProcessControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processSDeptView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SDeptViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSEmpView1">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSEmpView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SEmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSEmpView1">
+        <complexType>
+            <sequence>
+                <element name="sEmpView1" type="ns0:SEmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSEmpView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SEmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSEmpView1">
+        <complexType>
+            <sequence>
+                <element name="sEmpView1" type="ns0:SEmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSEmpView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SEmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSEmpView1">
+        <complexType>
+            <sequence>
+                <element name="sEmpView1" type="ns0:SEmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSEmpView1Response">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="mergeSEmpView1">
+        <complexType>
+            <sequence>
+                <element name="sEmpView1" type="ns0:SEmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="mergeSEmpView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SEmpViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSEmpView1">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns1:FindCriteria"/>
+                <element name="findControl" type="ns1:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSEmpView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SEmpViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSEmpView1ByDept">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns1:FindCriteria"/>
+                <element name="bv_dName" type="string"/>
+                <element name="findControl" type="ns1:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSEmpView1ByDeptResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SEmpViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processSEmpView1">
+        <complexType>
+            <sequence>
+                <element name="changeOperation" type="string"/>
+                <element name="sEmpView1" type="ns0:SEmpViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="processControl" type="ns1:ProcessControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processSEmpView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:SEmpViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

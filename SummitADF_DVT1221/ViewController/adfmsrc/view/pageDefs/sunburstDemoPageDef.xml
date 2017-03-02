@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.62.49" id="sunburstDemoPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SRegionView1" RangeSize="-1" DataControl="AppModuleDataControl" id="SRegionView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SRegionView1Iterator" id="SRegionView1">
+      <nodeDefinition DefName="model.SRegionView" Name="SRegionView10">
+        <AttrNames>
+          <Item Value="TotalSales"/>
+          <Item Value="Name"/>
+          <Item Value="TotalOrders"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="SCountriesView"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="model.SCountriesView" Name="SRegionView11">
+        <AttrNames>
+          <Item Value="TotalSales"/>
+          <Item Value="TotalOrders"/>
+          <Item Value="Country"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

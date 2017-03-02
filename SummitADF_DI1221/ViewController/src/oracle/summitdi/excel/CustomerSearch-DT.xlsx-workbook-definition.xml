@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workbook id="369f71ad-a53a-48e3-802f-c01ee1d365a8" schema-version="1" xmlns="http://xmlns.oracle.com/adf/desktopintegration/workbook">
+  <!--source-document="CustomerSearch.xlsx" client-version="4.2.0.65534"-->
+  <resource-list>
+    <resource>
+      <alias>res</alias>
+      <class>oracle.summitdi.resources.UIResources</class>
+    </resource>
+  </resource-list>
+  <branding-list>
+    <branding>
+      <name>Application Name</name>
+      <value>#{res['summitdi.general.branding.application']}</value>
+    </branding>
+    <branding>
+      <name>Application Version</name>
+      <value>#{res['summitdi.general.branding.version']}</value>
+    </branding>
+    <branding>
+      <name>Workbook Name</name>
+      <value>#{res['excel.search.title']}</value>
+    </branding>
+    <branding>
+      <name>Workbook Version</name>
+      <value>#{res['summitdi.general.branding.version']}</value>
+    </branding>
+    <branding>
+      <name>Copyright</name>
+      <value>#{res['summitdi.general.branding.copyright']}</value>
+    </branding>
+  </branding-list>
+  <remote-servlet-path>/adfdiRemoteServlet</remote-servlet-path>
+  <web-app-root>http://127.0.0.1:7101/summit</web-app-root>
+  <application-home-folder></application-home-folder>
+  <web-pages-folder></web-pages-folder>
+  <runtime-ribbon-tab>
+    <title>#{res['excel.search.sheet.title']}</title>
+    <command-list>
+      <command method="Login" />
+      <command method="Logout" />
+      <command method="ClearAllData" />
+      <command method="EditOptions" />
+      <command method="ViewAboutDialog" />
+      <command method="ToggleStatusViewer" />
+    </command-list>
+  </runtime-ribbon-tab>
+  <worksheet-list>
+    <worksheet name="Customers">
+      <event-list>
+        <event type="Startup">
+          <action-set>
+            <status mode="MainBarOnly">
+              <title>#{res['excel.search.sheet.title']}</title>
+              <message>#{res['excel.search.startup.message']}</message>
+            </status>
+            <action-list>
+              <component-action>
+                <component-id>TAB303966901</component-id>
+                <action>Initialize</action>
+                <detail-status-message>Intializing customer table</detail-status-message>
+                <annotation>Call to Initialize during Startup helps ResizeColumns work better</annotation>
+              </component-action>
+              <server-action>
+                <action-id>Execute</action-id>
+                <detail-status-message>Executing query</detail-status-message>
+              </server-action>
+              <component-action>
+                <component-id>TAB303966901</component-id>
+                <action>Download</action>
+                <detail-status-message>Downloading customers</detail-status-message>
+              </component-action>
+              <component-action>
+                <component-id>TAB303966901</component-id>
+                <action>ResizeColumns</action>
+                <detail-status-message>Resizing table columns</detail-status-message>
+              </component-action>
+            </action-list>
+          </action-set>
+        </event>
+      </event-list>
+      <ribbon-command-list>
+        <ribbon-command id="MEN1551960310">
+          <select-action-set>
+            <status>
+              <title>#{res['excel.search.sheet.title']}</title>
+              <message>#{res['excel.search.ribbon.search.message']}</message>
+            </status>
+            <action-list>
+              <dialog-action>
+                <window-size height="200" width="400" />
+                <page>/faces/external/searchForm.jspx</page>
+                <title>#{res['excel.search.popup.title']}</title>
+              </dialog-action>
+              <component-action>
+                <component-id>TAB303966901</component-id>
+                <action>Download</action>
+                <detail-status-message>Downloading search results</detail-status-message>
+                <annotation>Download Results from Table</annotation>
+              </component-action>
+            </action-list>
+          </select-action-set>
+          <label>#{res['excel.search.ribbon.search']}</label>
+          <tooltip>#{res['excel.search.ribbon.search.tooltip']}</tooltip>
+          <image>Search</image>
+        </ribbon-command>
+        <ribbon-command id="MEN368572107">
+          <select-action-set>
+            <status>
+              <title>#{res['excel.search.sheet.title']}</title>
+              <message>#{res['excel.search.ribbon.reset.message']}</message>
+            </status>
+            <action-list>
+              <server-action>
+                <action-id>resetQueryValues</action-id>
+                <detail-status-message>Resetting search query</detail-status-message>
+              </server-action>
+              <component-action>
+                <component-id>TAB303966901</component-id>
+                <action>Download</action>
+                <detail-status-message>Downloading all customers</detail-status-message>
+              </component-action>
+            </action-list>
+          </select-action-set>
+          <label>#{res['excel.search.ribbon.reset']}</label>
+          <tooltip>#{res['excel.search.ribbon.reset.tooltip']}</tooltip>
+          <image>Download</image>
+        </ribbon-command>
+      </ribbon-command-list>
+      <title>#{res['excel.search.sheet.title']}</title>
+      <pagedef-usage-id>ExcelSearchCustomers</pagedef-usage-id>
+      <protection>
+        <mode>Automatic</mode>
+      </protection>
+      <component-list>
+        <table-component id="TAB303966901" origin="B3">
+          <tree-id>Customers</tree-id>
+          <column-list>
+            <column id="Name">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.Name.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.Name.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.Name.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.Name.tooltip}</tooltip>
+            </column>
+            <column id="CreditRatingId">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.CreditRating1.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.CreditRating1.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.CreditRating1.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.CreditRating1.tooltip}</tooltip>
+            </column>
+            <column id="Phone">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.Phone.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.Phone.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.Phone.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.Phone.tooltip}</tooltip>
+            </column>
+            <column id="Address">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.Address.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.Address.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.Address.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.Address.tooltip}</tooltip>
+            </column>
+            <column id="City">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.City.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.City.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.City.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.City.tooltip}</tooltip>
+            </column>
+            <column id="State">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.State.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.State.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.State.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.State.tooltip}</tooltip>
+            </column>
+            <column id="ZipCode">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.ZipCode.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.ZipCode.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.ZipCode.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.ZipCode.tooltip}</tooltip>
+            </column>
+            <column id="RegionName">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.RegionName.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.RegionName.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.RegionName.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.RegionName.tooltip}</tooltip>
+            </column>
+            <column id="Country">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.Country.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.Country.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.Country.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.Country.tooltip}</tooltip>
+            </column>
+            <column id="SalesRep">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.SalesRep.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.SalesRep.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.SalesRep.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.SalesRep.tooltip}</tooltip>
+            </column>
+            <column id="Comments">
+              <update-component>
+                <model-driven-column>
+                  <value>#{row.bindings.Comments.inputValue}</value>
+                  <read-only>#{bindings.Customers.hints.Comments.readOnly}</read-only>
+                </model-driven-column>
+              </update-component>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{bindings.Customers.hints.Comments.label}</header-label>
+              <cell-style>Read-only Cell</cell-style>
+              <tooltip>#{bindings.Customers.hints.Comments.tooltip}</tooltip>
+            </column>
+            <column id="_ADF_RowKeyColumn">
+              <update-component>
+                <output-text />
+              </update-component>
+              <resize-mode>SpecifiedWidth</resize-mode>
+              <width>4</width>
+              <visible>True</visible>
+              <header-style>Column Header</header-style>
+              <header-label>#{_ADFDIres['COMPONENTS_TABLE_ROWKEY_COL_LABEL']}</header-label>
+              <cell-style>Key Cell</cell-style>
+            </column>
+          </column-list>
+          <resize-columns-mode>AutoFitAllWithHeader</resize-columns-mode>
+          <display-upload-options>false</display-upload-options>
+          <row-actions>
+            <update-row-enabled>false</update-row-enabled>
+          </row-actions>
+          <row-limit>
+            <max-rows>500</max-rows>
+          </row-limit>
+        </table-component>
+        <label-component id="LBL1434631400" origin="C1">
+          <label>#{res['excel.search.title']}</label>
+          <style>Branding Area</style>
+        </label-component>
+        <image-component id="IMG2127183279" origin="B1">
+          <source>/images/oracle_logo_sm.png</source>
+          <short-desc>Oracle Logo</short-desc>
+        </image-component>
+      </component-list>
+    </worksheet>
+  </worksheet-list>
+  <compatibility>
+    <table-components>
+      <model-driven-columns>
+        <date-picker-enabled>true</date-picker-enabled>
+        <input-lov-picker-enabled>true</input-lov-picker-enabled>
+      </model-driven-columns>
+      <row-action-set-model-mgmt-enabled>true</row-action-set-model-mgmt-enabled>
+      <smart-row-failure-reporting-enabled>true</smart-row-failure-reporting-enabled>
+    </table-components>
+    <data-entry-validation-enabled>true</data-entry-validation-enabled>
+  </compatibility>
+  <auto-display-status-viewer-enabled>true</auto-display-status-viewer-enabled>
+</workbook>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.20.31" id="DataBindings"
+             SeparateXMLFiles="false" Package="oracle.summit.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/RemoteViewer.jsf" usageId="oracle_summit_view_RemoteViewerPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="oracle_summit_view_RemoteViewerPageDef" path="oracle.summit.view.pageDefs.RemoteViewerPageDef"/>
+  </pageDefinitionUsages>
+</Application>

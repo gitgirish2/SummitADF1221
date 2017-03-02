@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1">
+      <property
+         name="linkStyle">Orthogonal</property>
+   </OverallProperties>
+   <View
+      id="View2">
+      <property
+         name="activityId">remoteView1</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">125.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>remoteView1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">129.80078</property>
+      <property
+         name="page">/remoteView1.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">remoteView2</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">361.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>remoteView2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">122.734375</property>
+      <property
+         name="page">/remoteView2.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">go2</property>
+      <property
+         name="sdm:polyPoints">R46,243.0,126.234375,243.0,119.16797,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">go1</property>
+      <property
+         name="sdm:polyPoints">L54,250.0,126.16797,250.0,133.23438,R54</property>
+   </ControlFlowCase>
+</SDM>
